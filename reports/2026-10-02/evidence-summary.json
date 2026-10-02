@@ -1,0 +1,3124 @@
+{
+  "run_id": "bf78df86-dc69-451f-8ecb-149dd4b8b708",
+  "report_timestamp": "2026-10-02T01:49:37+00:00",
+  "github_owner": "driaialchemy",
+  "mode": "scan_only",
+  "total_discovered": 13,
+  "total_eligible": 13,
+  "total_scanned": 13,
+  "total_clone_failed": 0,
+  "total_scan_failed": 0,
+  "total_unattempted": 0,
+  "total_skipped": 0,
+  "total_passed": 2,
+  "total_needs_work": 11,
+  "total_high_risk": 6,
+  "total_medium_risk": 5,
+  "total_low_risk": 2,
+  "skipped_repos": [],
+  "repo_results": [
+    {
+      "name": "AgentAuditLogger",
+      "full_name": "driaialchemy/AgentAuditLogger",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": false,
+      "errors": [],
+      "risk_level": "MEDIUM",
+      "readiness_score": 100,
+      "agent_ready": false,
+      "initial_scan": {
+        "name": "AgentAuditLogger",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/AgentAuditLogger",
+        "is_git_repo": true,
+        "has_gitignore": true,
+        "has_readme": true,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 22,
+        "languages": [
+          "TypeScript",
+          "Python",
+          "JavaScript"
+        ],
+        "has_tests_dir": true,
+        "has_pyproject": false,
+        "has_requirements_txt": false,
+        "has_package_json": true,
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_github_workflows": false,
+        "has_wrangler_toml": false,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [],
+        "api_terms_found": [
+          "requests"
+        ],
+        "last_modified": "2026-10-02T01:49:38.862329"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [
+        "Risk level is MEDIUM, expected LOW.",
+        "Dependency manifests present: package.json",
+        "HTTP networking libraries in use: requests",
+        "Test suite present \u2014 actively developed project."
+      ],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "present_active",
+        "P2": "not_present",
+        "P3": "not_present",
+        "P4": "not_present",
+        "uncertainty_monitoring": "not_present"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_AgentAuditLogger_20261002T014938Z.json",
+      "missing_controls": [],
+      "recommended_action": "Add agent policy files and document verification requirements before agent use.",
+      "action_plan": {
+        "repo": "driaialchemy/AgentAuditLogger",
+        "risk": "MEDIUM",
+        "agent_ready": false,
+        "top_corrective_actions": [
+          {
+            "title": "Medium-risk repo requires governance controls before agent access",
+            "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+            "priority": 2
+          }
+        ],
+        "risk_signals": [
+          {
+            "label": "Dependency manifest detected (package.json)",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "Test suite detected",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          },
+          {
+            "label": "HTTP networking detected (requests)",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "Dependency manifests present: package.json",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "HTTP networking libraries in use: requests",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "Test suite present \u2014 actively developed project",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          }
+        ],
+        "actionable_findings": [
+          {
+            "id": "medium_risk_controls",
+            "priority": 2,
+            "title": "Medium-risk repo requires governance controls before agent access",
+            "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+            "verification": "Confirm required governance controls are present for a medium-risk repo.",
+            "human_review_required": false
+          }
+        ],
+        "verification_steps": [
+          "Confirm required governance controls are present for a medium-risk repo."
+        ],
+        "recommended_mode": "prompt_only",
+        "human_review_required": false,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_AgentAuditLogger_20261002T014938Z.json"
+      }
+    },
+    {
+      "name": "AgentGovernanceHub",
+      "full_name": "driaialchemy/AgentGovernanceHub",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": false,
+      "errors": [],
+      "risk_level": "HIGH",
+      "readiness_score": 80,
+      "agent_ready": false,
+      "initial_scan": {
+        "name": "AgentGovernanceHub",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/AgentGovernanceHub",
+        "is_git_repo": true,
+        "has_gitignore": true,
+        "has_readme": true,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 97,
+        "languages": [
+          "TypeScript",
+          "Python"
+        ],
+        "has_tests_dir": false,
+        "has_pyproject": false,
+        "has_requirements_txt": true,
+        "has_package_json": true,
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_github_workflows": false,
+        "has_wrangler_toml": false,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [],
+        "api_terms_found": [
+          "api_key",
+          "openai",
+          "postgres",
+          "requests"
+        ],
+        "last_modified": "2026-10-02T01:49:39.928042"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [
+        "External AI API usage: openai \u2014 API key management required.",
+        "Credential pattern indicators in code: api_key",
+        "External database terms detected (postgres) \u2014 potential data compliance risk.",
+        "Risk level is HIGH, expected LOW.",
+        "Dependency manifests present: requirements.txt, package.json",
+        "HTTP networking libraries in use: requests"
+      ],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "present_inert",
+        "P2": "present_active",
+        "P3": "not_present",
+        "P4": "present_inert",
+        "uncertainty_monitoring": "present_inert"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_AgentGovernanceHub_20261002T014939Z.json",
+      "missing_controls": [],
+      "recommended_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+      "action_plan": {
+        "repo": "driaialchemy/AgentGovernanceHub",
+        "risk": "HIGH",
+        "agent_ready": false,
+        "top_corrective_actions": [
+          {
+            "title": "Credential pattern indicators found (api_key)",
+            "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+            "priority": 1
+          },
+          {
+            "title": "Credential pattern indicators in code: api_key",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "priority": 2
+          },
+          {
+            "title": "High-risk repo requires additional controls before agent access",
+            "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+            "priority": 2
+          }
+        ],
+        "risk_signals": [
+          {
+            "label": "Dependency manifest detected (requirements.txt, package.json)",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "HTTP networking detected (requests)",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "AI provider integrations present (openai)",
+            "governance_implication": "Document API key handling and require human review for provider configuration changes."
+          },
+          {
+            "label": "Database terms present (postgres)",
+            "governance_implication": "Ensure connection strings use environment variables and data handling is documented."
+          },
+          {
+            "label": "External AI API usage: openai \u2014 API key management required",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "External database terms detected (postgres) \u2014 potential data compliance risk",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "Dependency manifests present: requirements.txt, package.json",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "HTTP networking libraries in use: requests",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          }
+        ],
+        "actionable_findings": [
+          {
+            "id": "credential_patterns",
+            "priority": 1,
+            "title": "Credential pattern indicators found (api_key)",
+            "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+            "verification": "Confirm credential pattern indicators are cleared or documented as safe.",
+            "human_review_required": true
+          },
+          {
+            "id": "issue_2",
+            "priority": 2,
+            "title": "Credential pattern indicators in code: api_key",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "verification": "Re-run scan_only and confirm the issue is resolved.",
+            "human_review_required": true
+          },
+          {
+            "id": "high_risk_controls",
+            "priority": 2,
+            "title": "High-risk repo requires additional controls before agent access",
+            "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+            "verification": "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation.",
+            "human_review_required": true
+          }
+        ],
+        "verification_steps": [
+          "Confirm credential pattern indicators are cleared or documented as safe.",
+          "Re-run scan_only and confirm the issue is resolved.",
+          "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation."
+        ],
+        "recommended_mode": "human_review_first",
+        "human_review_required": true,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_AgentGovernanceHub_20261002T014939Z.json"
+      }
+    },
+    {
+      "name": "AgentProposalReview",
+      "full_name": "driaialchemy/AgentProposalReview",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": true,
+      "errors": [],
+      "risk_level": "LOW",
+      "readiness_score": 100,
+      "agent_ready": true,
+      "initial_scan": {
+        "name": "AgentProposalReview",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/AgentProposalReview",
+        "is_git_repo": true,
+        "has_gitignore": true,
+        "has_readme": true,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 17,
+        "languages": [
+          "Python"
+        ],
+        "has_tests_dir": true,
+        "has_pyproject": false,
+        "has_requirements_txt": false,
+        "has_package_json": false,
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_github_workflows": false,
+        "has_wrangler_toml": false,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [],
+        "api_terms_found": [],
+        "last_modified": "2026-10-02T01:49:40.432412"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "not_present",
+        "P2": "not_present",
+        "P3": "present_active",
+        "P4": "not_present",
+        "uncertainty_monitoring": "not_present"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_AgentProposalReview_20261002T014940Z.json",
+      "missing_controls": [],
+      "recommended_action": "No action required \u2014 repository is agent-ready.",
+      "action_plan": {
+        "repo": "driaialchemy/AgentProposalReview",
+        "risk": "LOW",
+        "agent_ready": true,
+        "top_corrective_actions": [],
+        "risk_signals": [
+          {
+            "label": "Test suite detected",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          }
+        ],
+        "actionable_findings": [],
+        "verification_steps": [
+          "Re-run weekly evidence in scan_only mode and confirm agent-ready PASS."
+        ],
+        "recommended_mode": "scan_only",
+        "human_review_required": false,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_AgentProposalReview_20261002T014940Z.json"
+      }
+    },
+    {
+      "name": "contract-risk-review-pipeline",
+      "full_name": "driaialchemy/contract-risk-review-pipeline",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": false,
+      "errors": [],
+      "risk_level": "MEDIUM",
+      "readiness_score": 90,
+      "agent_ready": false,
+      "initial_scan": {
+        "name": "contract-risk-review-pipeline",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/contract-risk-review-pipeline",
+        "is_git_repo": true,
+        "has_gitignore": true,
+        "has_readme": true,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 24,
+        "languages": [
+          "Python"
+        ],
+        "has_tests_dir": true,
+        "has_pyproject": false,
+        "has_requirements_txt": true,
+        "has_package_json": false,
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_github_workflows": false,
+        "has_wrangler_toml": false,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [],
+        "api_terms_found": [
+          "requests"
+        ],
+        "last_modified": "2026-10-02T01:49:40.851760"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [
+        "Risk level is MEDIUM, expected LOW.",
+        "Dependency manifests present: requirements.txt",
+        "HTTP networking libraries in use: requests",
+        "Test suite present \u2014 actively developed project."
+      ],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "not_present",
+        "P2": "not_present",
+        "P3": "not_present",
+        "P4": "not_present",
+        "uncertainty_monitoring": "not_present"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_contract-risk-review-pipeline_20261002T014940Z.json",
+      "missing_controls": [],
+      "recommended_action": "Add agent policy files and document verification requirements before agent use.",
+      "action_plan": {
+        "repo": "driaialchemy/contract-risk-review-pipeline",
+        "risk": "MEDIUM",
+        "agent_ready": false,
+        "top_corrective_actions": [
+          {
+            "title": "Medium-risk repo requires governance controls before agent access",
+            "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+            "priority": 2
+          }
+        ],
+        "risk_signals": [
+          {
+            "label": "Dependency manifest detected (requirements.txt)",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "Test suite detected",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          },
+          {
+            "label": "HTTP networking detected (requests)",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "Dependency manifests present: requirements.txt",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "HTTP networking libraries in use: requests",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "Test suite present \u2014 actively developed project",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          }
+        ],
+        "actionable_findings": [
+          {
+            "id": "medium_risk_controls",
+            "priority": 2,
+            "title": "Medium-risk repo requires governance controls before agent access",
+            "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+            "verification": "Confirm required governance controls are present for a medium-risk repo.",
+            "human_review_required": false
+          }
+        ],
+        "verification_steps": [
+          "Confirm required governance controls are present for a medium-risk repo."
+        ],
+        "recommended_mode": "prompt_only",
+        "human_review_required": false,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_contract-risk-review-pipeline_20261002T014940Z.json"
+      }
+    },
+    {
+      "name": "ContractRiskReview",
+      "full_name": "driaialchemy/ContractRiskReview",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": false,
+      "errors": [],
+      "risk_level": "HIGH",
+      "readiness_score": 100,
+      "agent_ready": false,
+      "initial_scan": {
+        "name": "ContractRiskReview",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/ContractRiskReview",
+        "is_git_repo": true,
+        "has_gitignore": true,
+        "has_readme": true,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 121,
+        "languages": [
+          "Python"
+        ],
+        "has_tests_dir": true,
+        "has_pyproject": true,
+        "has_requirements_txt": true,
+        "has_package_json": false,
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_github_workflows": true,
+        "has_wrangler_toml": false,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [],
+        "api_terms_found": [
+          "anthropic",
+          "api_key",
+          "gemini",
+          "openai",
+          "requests",
+          "sqlite"
+        ],
+        "last_modified": "2026-10-02T01:49:41.369054"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [
+        "Multiple AI provider integrations (anthropic, gemini, openai) \u2014 elevated orchestration complexity.",
+        "Credential pattern indicators in code: api_key",
+        "Risk level is HIGH, expected LOW.",
+        "Dependency manifests present: pyproject.toml, requirements.txt",
+        "CI/CD workflow configuration present (.github/workflows).",
+        "HTTP networking libraries in use: requests",
+        "Test suite present \u2014 actively developed project."
+      ],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "present_active",
+        "P2": "not_present",
+        "P3": "not_present",
+        "P4": "not_present",
+        "uncertainty_monitoring": "not_present"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_ContractRiskReview_20261002T014941Z.json",
+      "missing_controls": [],
+      "recommended_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+      "action_plan": {
+        "repo": "driaialchemy/ContractRiskReview",
+        "risk": "HIGH",
+        "agent_ready": false,
+        "top_corrective_actions": [
+          {
+            "title": "Credential pattern indicators found (api_key)",
+            "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+            "priority": 1
+          },
+          {
+            "title": "Credential pattern indicators in code: api_key",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "priority": 2
+          },
+          {
+            "title": "High-risk repo requires additional controls before agent access",
+            "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+            "priority": 2
+          }
+        ],
+        "risk_signals": [
+          {
+            "label": "Dependency manifest detected (requirements.txt, pyproject.toml)",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "Test suite detected",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          },
+          {
+            "label": "HTTP networking detected (requests)",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "CI/CD workflow present",
+            "governance_implication": "Review workflow permissions before allowing agent changes to pipeline files."
+          },
+          {
+            "label": "AI provider integrations present (anthropic, gemini, openai)",
+            "governance_implication": "Document API key handling and require human review for provider configuration changes."
+          },
+          {
+            "label": "Multiple AI provider integrations (anthropic, gemini, openai) \u2014 elevated orchestration complexity",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "Dependency manifests present: pyproject.toml, requirements.txt",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "CI/CD workflow configuration present (.github/workflows)",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "HTTP networking libraries in use: requests",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "Test suite present \u2014 actively developed project",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          }
+        ],
+        "actionable_findings": [
+          {
+            "id": "credential_patterns",
+            "priority": 1,
+            "title": "Credential pattern indicators found (api_key)",
+            "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+            "verification": "Confirm credential pattern indicators are cleared or documented as safe.",
+            "human_review_required": true
+          },
+          {
+            "id": "issue_2",
+            "priority": 2,
+            "title": "Credential pattern indicators in code: api_key",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "verification": "Re-run scan_only and confirm the issue is resolved.",
+            "human_review_required": true
+          },
+          {
+            "id": "high_risk_controls",
+            "priority": 2,
+            "title": "High-risk repo requires additional controls before agent access",
+            "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+            "verification": "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation.",
+            "human_review_required": true
+          }
+        ],
+        "verification_steps": [
+          "Confirm credential pattern indicators are cleared or documented as safe.",
+          "Re-run scan_only and confirm the issue is resolved.",
+          "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation."
+        ],
+        "recommended_mode": "human_review_first",
+        "human_review_required": true,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_ContractRiskReview_20261002T014941Z.json"
+      }
+    },
+    {
+      "name": "EcommerceQueryStudio",
+      "full_name": "driaialchemy/EcommerceQueryStudio",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": false,
+      "errors": [],
+      "risk_level": "MEDIUM",
+      "readiness_score": 100,
+      "agent_ready": false,
+      "initial_scan": {
+        "name": "EcommerceQueryStudio",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/EcommerceQueryStudio",
+        "is_git_repo": true,
+        "has_gitignore": true,
+        "has_readme": true,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 53,
+        "languages": [
+          "Python",
+          "SQL"
+        ],
+        "has_tests_dir": true,
+        "has_pyproject": true,
+        "has_requirements_txt": false,
+        "has_package_json": false,
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_github_workflows": true,
+        "has_wrangler_toml": false,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [],
+        "api_terms_found": [
+          "requests",
+          "sqlite"
+        ],
+        "last_modified": "2026-10-02T01:49:42.091060"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [
+        "Risk level is MEDIUM, expected LOW.",
+        "Dependency manifests present: pyproject.toml",
+        "CI/CD workflow configuration present (.github/workflows).",
+        "HTTP networking libraries in use: requests",
+        "Test suite present \u2014 actively developed project."
+      ],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "not_present",
+        "P2": "not_present",
+        "P3": "not_present",
+        "P4": "not_present",
+        "uncertainty_monitoring": "not_present"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_EcommerceQueryStudio_20261002T014942Z.json",
+      "missing_controls": [],
+      "recommended_action": "Add agent policy files and document verification requirements before agent use.",
+      "action_plan": {
+        "repo": "driaialchemy/EcommerceQueryStudio",
+        "risk": "MEDIUM",
+        "agent_ready": false,
+        "top_corrective_actions": [
+          {
+            "title": "Medium-risk repo requires governance controls before agent access",
+            "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+            "priority": 2
+          }
+        ],
+        "risk_signals": [
+          {
+            "label": "Dependency manifest detected (pyproject.toml)",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "Test suite detected",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          },
+          {
+            "label": "HTTP networking detected (requests)",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "CI/CD workflow present",
+            "governance_implication": "Review workflow permissions before allowing agent changes to pipeline files."
+          },
+          {
+            "label": "Dependency manifests present: pyproject.toml",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "CI/CD workflow configuration present (.github/workflows)",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "HTTP networking libraries in use: requests",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "Test suite present \u2014 actively developed project",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          }
+        ],
+        "actionable_findings": [
+          {
+            "id": "medium_risk_controls",
+            "priority": 2,
+            "title": "Medium-risk repo requires governance controls before agent access",
+            "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+            "verification": "Confirm required governance controls are present for a medium-risk repo.",
+            "human_review_required": false
+          }
+        ],
+        "verification_steps": [
+          "Confirm required governance controls are present for a medium-risk repo."
+        ],
+        "recommended_mode": "prompt_only",
+        "human_review_required": false,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_EcommerceQueryStudio_20261002T014942Z.json"
+      }
+    },
+    {
+      "name": "EquipmentComplianceTracker",
+      "full_name": "driaialchemy/EquipmentComplianceTracker",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": false,
+      "errors": [],
+      "risk_level": "HIGH",
+      "readiness_score": 75,
+      "agent_ready": false,
+      "initial_scan": {
+        "name": "EquipmentComplianceTracker",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/EquipmentComplianceTracker",
+        "is_git_repo": true,
+        "has_gitignore": true,
+        "has_readme": true,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 70,
+        "languages": [
+          "Python",
+          "SQL"
+        ],
+        "has_tests_dir": false,
+        "has_pyproject": false,
+        "has_requirements_txt": true,
+        "has_package_json": false,
+        "has_dockerfile": true,
+        "has_docker_compose": true,
+        "has_github_workflows": false,
+        "has_wrangler_toml": false,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [
+          "audit_trail.xlsx",
+          "audit_trail_with_tools_populated_demo_v2.xlsx",
+          "audit_trail_with_tools_populated_demo_v3.xlsx",
+          "audit_trail_with_tools_populated_demo_v4.xlsx",
+          "audit_trail_with_tools_v1.xlsx",
+          "brand_model_agg.xlsx",
+          "brand_model_aggregation.xlsx",
+          "device_data.xlsx",
+          "fft_demo_brands_updated.xlsx",
+          "gdpr_violations.xlsx",
+          "r2v3_violations.xlsx",
+          "seed/devicepassport_catalog.xlsx",
+          "seed/seed/devicepassport_catalog.xlsx",
+          "sensor_timeseries.xlsx"
+        ],
+        "api_terms_found": [
+          "anthropic",
+          "api_key",
+          "database_url",
+          "gemini",
+          "google.generativeai",
+          "httpx",
+          "openai",
+          "postgres",
+          "requests"
+        ],
+        "last_modified": "2026-10-02T01:50:04.720947"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [
+        "Spreadsheet/data export files found: audit_trail.xlsx, audit_trail_with_tools_populated_demo_v2.xlsx, audit_trail_with_tools_populated_demo_v3.xlsx",
+        "Multiple AI provider integrations (anthropic, gemini, google.generativeai, openai) \u2014 elevated orchestration complexity.",
+        "Credential pattern indicators in code: api_key, database_url",
+        "External database terms detected (postgres) \u2014 potential data compliance risk.",
+        "Risk level is HIGH, expected LOW.",
+        "Dependency manifests present: requirements.txt",
+        "Container configuration present (Dockerfile / docker-compose).",
+        "HTTP networking libraries in use: httpx, requests"
+      ],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "not_present",
+        "P2": "not_present",
+        "P3": "present_active",
+        "P4": "not_present",
+        "uncertainty_monitoring": "not_present"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_EquipmentComplianceTracker_20261002T015004Z.json",
+      "missing_controls": [],
+      "recommended_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+      "action_plan": {
+        "repo": "driaialchemy/EquipmentComplianceTracker",
+        "risk": "HIGH",
+        "agent_ready": false,
+        "top_corrective_actions": [
+          {
+            "title": "Credential pattern indicators found (api_key, database_url)",
+            "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+            "priority": 1
+          },
+          {
+            "title": "Credential pattern indicators in code: api_key, database_url",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "priority": 2
+          },
+          {
+            "title": "High-risk repo requires additional controls before agent access",
+            "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+            "priority": 2
+          },
+          {
+            "title": "Spreadsheet/data export files found: audit_trail.xlsx, audit_trail_with_tools_populated_demo_v2.xlsx, audit_trail_with_tools_populated_demo_v3.xlsx",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "priority": 2
+          }
+        ],
+        "risk_signals": [
+          {
+            "label": "Dependency manifest detected (requirements.txt)",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "HTTP networking detected (httpx, requests)",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "Container configuration present",
+            "governance_implication": "Restrict agent access to container build and deployment commands."
+          },
+          {
+            "label": "AI provider integrations present (anthropic, gemini, google.generativeai, openai)",
+            "governance_implication": "Document API key handling and require human review for provider configuration changes."
+          },
+          {
+            "label": "Database terms present (postgres)",
+            "governance_implication": "Ensure connection strings use environment variables and data handling is documented."
+          },
+          {
+            "label": "Multiple AI provider integrations (anthropic, gemini, google.generativeai, openai) \u2014 elevated orchestration complexity",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "External database terms detected (postgres) \u2014 potential data compliance risk",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "Dependency manifests present: requirements.txt",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "Container configuration present (Dockerfile / docker-compose)",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "HTTP networking libraries in use: httpx, requests",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          }
+        ],
+        "actionable_findings": [
+          {
+            "id": "credential_patterns",
+            "priority": 1,
+            "title": "Credential pattern indicators found (api_key, database_url)",
+            "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+            "verification": "Confirm credential pattern indicators are cleared or documented as safe.",
+            "human_review_required": true
+          },
+          {
+            "id": "issue_3",
+            "priority": 2,
+            "title": "Credential pattern indicators in code: api_key, database_url",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "verification": "Re-run scan_only and confirm the issue is resolved.",
+            "human_review_required": true
+          },
+          {
+            "id": "high_risk_controls",
+            "priority": 2,
+            "title": "High-risk repo requires additional controls before agent access",
+            "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+            "verification": "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation.",
+            "human_review_required": true
+          },
+          {
+            "id": "issue_2",
+            "priority": 2,
+            "title": "Spreadsheet/data export files found: audit_trail.xlsx, audit_trail_with_tools_populated_demo_v2.xlsx, audit_trail_with_tools_populated_demo_v3.xlsx",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "verification": "Re-run scan_only and confirm the issue is resolved.",
+            "human_review_required": true
+          }
+        ],
+        "verification_steps": [
+          "Confirm credential pattern indicators are cleared or documented as safe.",
+          "Re-run scan_only and confirm the issue is resolved.",
+          "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation."
+        ],
+        "recommended_mode": "human_review_first",
+        "human_review_required": true,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_EquipmentComplianceTracker_20261002T015004Z.json"
+      }
+    },
+    {
+      "name": "ExpenseVerificationDesk",
+      "full_name": "driaialchemy/ExpenseVerificationDesk",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": false,
+      "errors": [],
+      "risk_level": "HIGH",
+      "readiness_score": 85,
+      "agent_ready": false,
+      "initial_scan": {
+        "name": "ExpenseVerificationDesk",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/ExpenseVerificationDesk",
+        "is_git_repo": true,
+        "has_gitignore": true,
+        "has_readme": true,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 39,
+        "languages": [
+          "Python",
+          "SQL"
+        ],
+        "has_tests_dir": true,
+        "has_pyproject": true,
+        "has_requirements_txt": false,
+        "has_package_json": false,
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_github_workflows": false,
+        "has_wrangler_toml": false,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [
+          "sample_expenses.xlsx"
+        ],
+        "api_terms_found": [
+          "anthropic",
+          "api_key",
+          "httpx"
+        ],
+        "last_modified": "2026-10-02T01:50:05.297071"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [
+        "Spreadsheet/data export files found: sample_expenses.xlsx",
+        "External AI API usage: anthropic \u2014 API key management required.",
+        "Credential pattern indicators in code: api_key",
+        "Risk level is HIGH, expected LOW.",
+        "Dependency manifests present: pyproject.toml",
+        "HTTP networking libraries in use: httpx",
+        "Test suite present \u2014 actively developed project."
+      ],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "present_active",
+        "P2": "not_present",
+        "P3": "not_present",
+        "P4": "not_present",
+        "uncertainty_monitoring": "not_present"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_ExpenseVerificationDesk_20261002T015005Z.json",
+      "missing_controls": [],
+      "recommended_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+      "action_plan": {
+        "repo": "driaialchemy/ExpenseVerificationDesk",
+        "risk": "HIGH",
+        "agent_ready": false,
+        "top_corrective_actions": [
+          {
+            "title": "Credential pattern indicators found (api_key)",
+            "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+            "priority": 1
+          },
+          {
+            "title": "Credential pattern indicators in code: api_key",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "priority": 2
+          },
+          {
+            "title": "High-risk repo requires additional controls before agent access",
+            "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+            "priority": 2
+          },
+          {
+            "title": "Spreadsheet/data export files found: sample_expenses.xlsx",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "priority": 2
+          }
+        ],
+        "risk_signals": [
+          {
+            "label": "Dependency manifest detected (pyproject.toml)",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "Test suite detected",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          },
+          {
+            "label": "HTTP networking detected (httpx)",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "AI provider integrations present (anthropic)",
+            "governance_implication": "Document API key handling and require human review for provider configuration changes."
+          },
+          {
+            "label": "External AI API usage: anthropic \u2014 API key management required",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "Dependency manifests present: pyproject.toml",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "HTTP networking libraries in use: httpx",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "Test suite present \u2014 actively developed project",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          }
+        ],
+        "actionable_findings": [
+          {
+            "id": "credential_patterns",
+            "priority": 1,
+            "title": "Credential pattern indicators found (api_key)",
+            "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+            "verification": "Confirm credential pattern indicators are cleared or documented as safe.",
+            "human_review_required": true
+          },
+          {
+            "id": "issue_3",
+            "priority": 2,
+            "title": "Credential pattern indicators in code: api_key",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "verification": "Re-run scan_only and confirm the issue is resolved.",
+            "human_review_required": true
+          },
+          {
+            "id": "high_risk_controls",
+            "priority": 2,
+            "title": "High-risk repo requires additional controls before agent access",
+            "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+            "verification": "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation.",
+            "human_review_required": true
+          },
+          {
+            "id": "issue_2",
+            "priority": 2,
+            "title": "Spreadsheet/data export files found: sample_expenses.xlsx",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "verification": "Re-run scan_only and confirm the issue is resolved.",
+            "human_review_required": true
+          }
+        ],
+        "verification_steps": [
+          "Confirm credential pattern indicators are cleared or documented as safe.",
+          "Re-run scan_only and confirm the issue is resolved.",
+          "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation."
+        ],
+        "recommended_mode": "human_review_first",
+        "human_review_required": true,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_ExpenseVerificationDesk_20261002T015005Z.json"
+      }
+    },
+    {
+      "name": "IncomingRequestScreener",
+      "full_name": "driaialchemy/IncomingRequestScreener",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": false,
+      "errors": [],
+      "risk_level": "MEDIUM",
+      "readiness_score": 60,
+      "agent_ready": false,
+      "initial_scan": {
+        "name": "IncomingRequestScreener",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/IncomingRequestScreener",
+        "is_git_repo": true,
+        "has_gitignore": false,
+        "has_readme": false,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 2,
+        "languages": [],
+        "has_tests_dir": false,
+        "has_pyproject": false,
+        "has_requirements_txt": false,
+        "has_package_json": false,
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_github_workflows": false,
+        "has_wrangler_toml": false,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [],
+        "api_terms_found": [
+          "requests"
+        ],
+        "last_modified": "2026-10-02T01:50:05.706944"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [
+        "Risk level is MEDIUM, expected LOW.",
+        "Missing .gitignore.",
+        "HTTP networking libraries in use: requests",
+        "Missing README \u2014 project context unavailable to agent.",
+        "Missing .gitignore \u2014 unintended files may be tracked."
+      ],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "not_present",
+        "P2": "not_present",
+        "P3": "not_present",
+        "P4": "not_present",
+        "uncertainty_monitoring": "not_present"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_IncomingRequestScreener_20261002T015005Z.json",
+      "missing_controls": [
+        ".gitignore",
+        "README"
+      ],
+      "recommended_action": "Add agent policy files and document verification requirements before agent use.",
+      "action_plan": {
+        "repo": "driaialchemy/IncomingRequestScreener",
+        "risk": "MEDIUM",
+        "agent_ready": false,
+        "top_corrective_actions": [
+          {
+            "title": "Medium-risk repo requires governance controls before agent access",
+            "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+            "priority": 2
+          },
+          {
+            "title": "Missing .gitignore / unintended files may be tracked",
+            "corrective_action": "Add .gitignore entries for .env, virtual environments, caches, local reports, audit temp files, and generated workspaces.",
+            "priority": 3
+          },
+          {
+            "title": "Missing README / project context for agents",
+            "corrective_action": "Add README with repo purpose, setup instructions, test command, expected inputs/outputs, and safe-use notes.",
+            "priority": 3
+          }
+        ],
+        "risk_signals": [
+          {
+            "label": "HTTP networking detected (requests)",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "HTTP networking libraries in use: requests",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          }
+        ],
+        "actionable_findings": [
+          {
+            "id": "medium_risk_controls",
+            "priority": 2,
+            "title": "Medium-risk repo requires governance controls before agent access",
+            "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+            "verification": "Confirm required governance controls are present for a medium-risk repo.",
+            "human_review_required": false
+          },
+          {
+            "id": "missing_gitignore",
+            "priority": 3,
+            "title": "Missing .gitignore / unintended files may be tracked",
+            "corrective_action": "Add .gitignore entries for .env, virtual environments, caches, local reports, audit temp files, and generated workspaces.",
+            "verification": "Re-run scan_only and confirm .gitignore is present.",
+            "human_review_required": false
+          },
+          {
+            "id": "missing_readme",
+            "priority": 3,
+            "title": "Missing README / project context for agents",
+            "corrective_action": "Add README with repo purpose, setup instructions, test command, expected inputs/outputs, and safe-use notes.",
+            "verification": "Re-run scan_only and confirm README is present.",
+            "human_review_required": false
+          }
+        ],
+        "verification_steps": [
+          "Confirm required governance controls are present for a medium-risk repo.",
+          "Re-run scan_only and confirm .gitignore is present.",
+          "Re-run scan_only and confirm README is present."
+        ],
+        "recommended_mode": "prompt_only",
+        "human_review_required": false,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_IncomingRequestScreener_20261002T015005Z.json"
+      }
+    },
+    {
+      "name": "MultiAgentWorkbench",
+      "full_name": "driaialchemy/MultiAgentWorkbench",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": false,
+      "errors": [],
+      "risk_level": "MEDIUM",
+      "readiness_score": 100,
+      "agent_ready": false,
+      "initial_scan": {
+        "name": "MultiAgentWorkbench",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/MultiAgentWorkbench",
+        "is_git_repo": true,
+        "has_gitignore": true,
+        "has_readme": true,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 89,
+        "languages": [
+          "Python"
+        ],
+        "has_tests_dir": true,
+        "has_pyproject": false,
+        "has_requirements_txt": true,
+        "has_package_json": false,
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_github_workflows": false,
+        "has_wrangler_toml": false,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [],
+        "api_terms_found": [],
+        "last_modified": "2026-10-02T01:50:06.277101"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [
+        "Risk level is MEDIUM, expected LOW.",
+        "Dependency manifests present: requirements.txt",
+        "Test suite present \u2014 actively developed project."
+      ],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "present_active",
+        "P2": "present_active",
+        "P3": "not_present",
+        "P4": "not_present",
+        "uncertainty_monitoring": "not_present"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_MultiAgentWorkbench_20261002T015006Z.json",
+      "missing_controls": [],
+      "recommended_action": "Add agent policy files and document verification requirements before agent use.",
+      "action_plan": {
+        "repo": "driaialchemy/MultiAgentWorkbench",
+        "risk": "MEDIUM",
+        "agent_ready": false,
+        "top_corrective_actions": [
+          {
+            "title": "Medium-risk repo requires governance controls before agent access",
+            "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+            "priority": 2
+          }
+        ],
+        "risk_signals": [
+          {
+            "label": "Dependency manifest detected (requirements.txt)",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "Test suite detected",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          },
+          {
+            "label": "Dependency manifests present: requirements.txt",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "Test suite present \u2014 actively developed project",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          }
+        ],
+        "actionable_findings": [
+          {
+            "id": "medium_risk_controls",
+            "priority": 2,
+            "title": "Medium-risk repo requires governance controls before agent access",
+            "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+            "verification": "Confirm required governance controls are present for a medium-risk repo.",
+            "human_review_required": false
+          }
+        ],
+        "verification_steps": [
+          "Confirm required governance controls are present for a medium-risk repo."
+        ],
+        "recommended_mode": "prompt_only",
+        "human_review_required": false,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_MultiAgentWorkbench_20261002T015006Z.json"
+      }
+    },
+    {
+      "name": "PropertyLeadFinder",
+      "full_name": "driaialchemy/PropertyLeadFinder",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": false,
+      "errors": [],
+      "risk_level": "HIGH",
+      "readiness_score": 65,
+      "agent_ready": false,
+      "initial_scan": {
+        "name": "PropertyLeadFinder",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/PropertyLeadFinder",
+        "is_git_repo": true,
+        "has_gitignore": true,
+        "has_readme": true,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 30,
+        "languages": [
+          "JavaScript",
+          "Python"
+        ],
+        "has_tests_dir": false,
+        "has_pyproject": false,
+        "has_requirements_txt": false,
+        "has_package_json": true,
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_github_workflows": false,
+        "has_wrangler_toml": true,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [
+          "synthetic_hidden_equity_data_az (1).xlsx"
+        ],
+        "api_terms_found": [
+          "api_key",
+          "cloudflare",
+          "database_url",
+          "postgres",
+          "supabase"
+        ],
+        "last_modified": "2026-10-02T01:50:06.849940"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [
+        "Spreadsheet/data export files found: synthetic_hidden_equity_data_az (1).xlsx",
+        "Credential pattern indicators in code: api_key, database_url",
+        "External database terms detected (postgres, supabase) \u2014 potential data compliance risk.",
+        "Cloud deployment configuration present: wrangler.toml",
+        "Risk level is HIGH, expected LOW.",
+        "Dependency manifests present: package.json"
+      ],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "not_present",
+        "P2": "not_present",
+        "P3": "not_present",
+        "P4": "not_present",
+        "uncertainty_monitoring": "not_present"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_PropertyLeadFinder_20261002T015006Z.json",
+      "missing_controls": [],
+      "recommended_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+      "action_plan": {
+        "repo": "driaialchemy/PropertyLeadFinder",
+        "risk": "HIGH",
+        "agent_ready": false,
+        "top_corrective_actions": [
+          {
+            "title": "Credential pattern indicators found (api_key, database_url)",
+            "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+            "priority": 1
+          },
+          {
+            "title": "Credential pattern indicators in code: api_key, database_url",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "priority": 2
+          },
+          {
+            "title": "High-risk repo requires additional controls before agent access",
+            "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+            "priority": 2
+          },
+          {
+            "title": "Spreadsheet/data export files found: synthetic_hidden_equity_data_az (1).xlsx",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "priority": 2
+          }
+        ],
+        "risk_signals": [
+          {
+            "label": "Dependency manifest detected (package.json)",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "Database terms present (postgres, supabase)",
+            "governance_implication": "Ensure connection strings use environment variables and data handling is documented."
+          },
+          {
+            "label": "Cloud deployment configuration present (wrangler.toml)",
+            "governance_implication": "Deployment changes should require explicit human approval."
+          },
+          {
+            "label": "External database terms detected (postgres, supabase) \u2014 potential data compliance risk",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "Cloud deployment configuration present: wrangler.toml",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "Dependency manifests present: package.json",
+            "governance_implication": "Dependency changes should require review and test verification."
+          }
+        ],
+        "actionable_findings": [
+          {
+            "id": "credential_patterns",
+            "priority": 1,
+            "title": "Credential pattern indicators found (api_key, database_url)",
+            "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+            "verification": "Confirm credential pattern indicators are cleared or documented as safe.",
+            "human_review_required": true
+          },
+          {
+            "id": "issue_3",
+            "priority": 2,
+            "title": "Credential pattern indicators in code: api_key, database_url",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "verification": "Re-run scan_only and confirm the issue is resolved.",
+            "human_review_required": true
+          },
+          {
+            "id": "high_risk_controls",
+            "priority": 2,
+            "title": "High-risk repo requires additional controls before agent access",
+            "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+            "verification": "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation.",
+            "human_review_required": true
+          },
+          {
+            "id": "issue_2",
+            "priority": 2,
+            "title": "Spreadsheet/data export files found: synthetic_hidden_equity_data_az (1).xlsx",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "verification": "Re-run scan_only and confirm the issue is resolved.",
+            "human_review_required": true
+          }
+        ],
+        "verification_steps": [
+          "Confirm credential pattern indicators are cleared or documented as safe.",
+          "Re-run scan_only and confirm the issue is resolved.",
+          "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation."
+        ],
+        "recommended_mode": "human_review_first",
+        "human_review_required": true,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_PropertyLeadFinder_20261002T015006Z.json"
+      }
+    },
+    {
+      "name": "RepoReadinessGovernor",
+      "full_name": "driaialchemy/RepoReadinessGovernor",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": false,
+      "errors": [],
+      "risk_level": "HIGH",
+      "readiness_score": 90,
+      "agent_ready": false,
+      "initial_scan": {
+        "name": "RepoReadinessGovernor",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/RepoReadinessGovernor",
+        "is_git_repo": true,
+        "has_gitignore": true,
+        "has_readme": true,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 389,
+        "languages": [
+          "Python"
+        ],
+        "has_tests_dir": true,
+        "has_pyproject": true,
+        "has_requirements_txt": false,
+        "has_package_json": false,
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_github_workflows": true,
+        "has_wrangler_toml": false,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [],
+        "api_terms_found": [
+          "aiohttp",
+          "anthropic",
+          "api_key",
+          "cloudflare",
+          "database_url",
+          "gemini",
+          "google.generativeai",
+          "httpx",
+          "openai",
+          "postgres",
+          "requests",
+          "sqlite",
+          "supabase"
+        ],
+        "last_modified": "2026-10-02T01:50:07.398256"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [
+        "Multiple AI provider integrations (anthropic, gemini, google.generativeai, openai) \u2014 elevated orchestration complexity.",
+        "Credential pattern indicators in code: api_key, database_url",
+        "External database terms detected (postgres, supabase) \u2014 potential data compliance risk.",
+        "Risk level is HIGH, expected LOW.",
+        "Dependency manifests present: pyproject.toml",
+        "CI/CD workflow configuration present (.github/workflows).",
+        "HTTP networking libraries in use: aiohttp, httpx, requests",
+        "Test suite present \u2014 actively developed project."
+      ],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "not_present",
+        "P2": "not_present",
+        "P3": "not_present",
+        "P4": "not_present",
+        "uncertainty_monitoring": "not_present"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_RepoReadinessGovernor_20261002T015007Z.json",
+      "missing_controls": [],
+      "recommended_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+      "action_plan": {
+        "repo": "driaialchemy/RepoReadinessGovernor",
+        "risk": "HIGH",
+        "agent_ready": false,
+        "top_corrective_actions": [
+          {
+            "title": "Credential pattern indicators found (api_key, database_url)",
+            "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+            "priority": 1
+          },
+          {
+            "title": "Credential pattern indicators in code: api_key, database_url",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "priority": 2
+          },
+          {
+            "title": "High-risk repo requires additional controls before agent access",
+            "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+            "priority": 2
+          }
+        ],
+        "risk_signals": [
+          {
+            "label": "Dependency manifest detected (pyproject.toml)",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "Test suite detected",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          },
+          {
+            "label": "HTTP networking detected (aiohttp, httpx, requests)",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "CI/CD workflow present",
+            "governance_implication": "Review workflow permissions before allowing agent changes to pipeline files."
+          },
+          {
+            "label": "AI provider integrations present (anthropic, gemini, google.generativeai, openai)",
+            "governance_implication": "Document API key handling and require human review for provider configuration changes."
+          },
+          {
+            "label": "Database terms present (postgres, supabase)",
+            "governance_implication": "Ensure connection strings use environment variables and data handling is documented."
+          },
+          {
+            "label": "Multiple AI provider integrations (anthropic, gemini, google.generativeai, openai) \u2014 elevated orchestration complexity",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "External database terms detected (postgres, supabase) \u2014 potential data compliance risk",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "Dependency manifests present: pyproject.toml",
+            "governance_implication": "Dependency changes should require review and test verification."
+          },
+          {
+            "label": "CI/CD workflow configuration present (.github/workflows)",
+            "governance_implication": "Review governance implications in the audit evidence before agent use."
+          },
+          {
+            "label": "HTTP networking libraries in use: aiohttp, httpx, requests",
+            "governance_implication": "Agent changes should require review for external calls and data handling."
+          },
+          {
+            "label": "Test suite present \u2014 actively developed project",
+            "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+          }
+        ],
+        "actionable_findings": [
+          {
+            "id": "credential_patterns",
+            "priority": 1,
+            "title": "Credential pattern indicators found (api_key, database_url)",
+            "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+            "verification": "Confirm credential pattern indicators are cleared or documented as safe.",
+            "human_review_required": true
+          },
+          {
+            "id": "issue_2",
+            "priority": 2,
+            "title": "Credential pattern indicators in code: api_key, database_url",
+            "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+            "verification": "Re-run scan_only and confirm the issue is resolved.",
+            "human_review_required": true
+          },
+          {
+            "id": "high_risk_controls",
+            "priority": 2,
+            "title": "High-risk repo requires additional controls before agent access",
+            "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+            "verification": "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation.",
+            "human_review_required": true
+          }
+        ],
+        "verification_steps": [
+          "Confirm credential pattern indicators are cleared or documented as safe.",
+          "Re-run scan_only and confirm the issue is resolved.",
+          "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation."
+        ],
+        "recommended_mode": "human_review_first",
+        "human_review_required": true,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_RepoReadinessGovernor_20261002T015007Z.json"
+      }
+    },
+    {
+      "name": "skillsartifactsbuild",
+      "full_name": "driaialchemy/skillsartifactsbuild",
+      "mode": "scan_only",
+      "status": "scanned",
+      "passed": true,
+      "errors": [],
+      "risk_level": "LOW",
+      "readiness_score": 90,
+      "agent_ready": true,
+      "initial_scan": {
+        "name": "skillsartifactsbuild",
+        "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/skillsartifactsbuild",
+        "is_git_repo": true,
+        "has_gitignore": true,
+        "has_readme": true,
+        "has_claude_md": true,
+        "has_agents_md": true,
+        "has_env_files": false,
+        "env_file_paths": [],
+        "file_count": 4,
+        "languages": [],
+        "has_tests_dir": false,
+        "has_pyproject": false,
+        "has_requirements_txt": false,
+        "has_package_json": false,
+        "has_dockerfile": false,
+        "has_docker_compose": false,
+        "has_github_workflows": false,
+        "has_wrangler_toml": false,
+        "has_vercel_json": false,
+        "has_netlify_toml": false,
+        "has_render_yaml": false,
+        "artifact_paths": [],
+        "api_terms_found": [],
+        "last_modified": "2026-10-02T01:50:07.886291"
+      },
+      "has_claude_md": true,
+      "remaining_issues": [],
+      "policy_artifact_status": "recommendations_only",
+      "remediation_status": "not_requested",
+      "verification_status": "scan_only_no_verification_loop",
+      "governance_status": {
+        "P1": "not_present",
+        "P2": "not_present",
+        "P3": "not_present",
+        "P4": "not_present",
+        "uncertainty_monitoring": "not_present"
+      },
+      "audit_path": "audit/multi_repo/2026-10-02/repo_skillsartifactsbuild_20261002T015007Z.json",
+      "missing_controls": [],
+      "recommended_action": "No action required \u2014 repository is agent-ready.",
+      "action_plan": {
+        "repo": "driaialchemy/skillsartifactsbuild",
+        "risk": "LOW",
+        "agent_ready": true,
+        "top_corrective_actions": [],
+        "risk_signals": [],
+        "actionable_findings": [],
+        "verification_steps": [
+          "Re-run weekly evidence in scan_only mode and confirm agent-ready PASS."
+        ],
+        "recommended_mode": "scan_only",
+        "human_review_required": false,
+        "audit_path": "audit/multi_repo/2026-10-02/repo_skillsartifactsbuild_20261002T015007Z.json"
+      }
+    }
+  ],
+  "corrective_actions": [
+    {
+      "repo": "driaialchemy/AgentGovernanceHub",
+      "issue": "Credential pattern indicators found (api_key)",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_AgentGovernanceHub_20261002T014939Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 1,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/ContractRiskReview",
+      "issue": "Credential pattern indicators found (api_key)",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_ContractRiskReview_20261002T014941Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 1,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/EquipmentComplianceTracker",
+      "issue": "Credential pattern indicators found (api_key, database_url)",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_EquipmentComplianceTracker_20261002T015004Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 1,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/ExpenseVerificationDesk",
+      "issue": "Credential pattern indicators found (api_key)",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_ExpenseVerificationDesk_20261002T015005Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 1,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/PropertyLeadFinder",
+      "issue": "Credential pattern indicators found (api_key, database_url)",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_PropertyLeadFinder_20261002T015006Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 1,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/RepoReadinessGovernor",
+      "issue": "Credential pattern indicators found (api_key, database_url)",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_RepoReadinessGovernor_20261002T015007Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 1,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/AgentAuditLogger",
+      "issue": "Medium-risk repo requires governance controls before agent access",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+      "verification_action": "Confirm required governance controls are present for a medium-risk repo.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_AgentAuditLogger_20261002T014938Z.json",
+      "recommended_mode": "prompt_only",
+      "human_review_required": false,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/AgentGovernanceHub",
+      "issue": "Credential pattern indicators in code: api_key",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_AgentGovernanceHub_20261002T014939Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/AgentGovernanceHub",
+      "issue": "High-risk repo requires additional controls before agent access",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_AgentGovernanceHub_20261002T014939Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/ContractRiskReview",
+      "issue": "Credential pattern indicators in code: api_key",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_ContractRiskReview_20261002T014941Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/ContractRiskReview",
+      "issue": "High-risk repo requires additional controls before agent access",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_ContractRiskReview_20261002T014941Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/EcommerceQueryStudio",
+      "issue": "Medium-risk repo requires governance controls before agent access",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+      "verification_action": "Confirm required governance controls are present for a medium-risk repo.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_EcommerceQueryStudio_20261002T014942Z.json",
+      "recommended_mode": "prompt_only",
+      "human_review_required": false,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/EquipmentComplianceTracker",
+      "issue": "Credential pattern indicators in code: api_key, database_url",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_EquipmentComplianceTracker_20261002T015004Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/EquipmentComplianceTracker",
+      "issue": "High-risk repo requires additional controls before agent access",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_EquipmentComplianceTracker_20261002T015004Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/EquipmentComplianceTracker",
+      "issue": "Spreadsheet/data export files found: audit_trail.xlsx, audit_trail_with_tools_populated_demo_v2.xlsx, audit_trail_with_tools_populated_demo_v3.xlsx",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_EquipmentComplianceTracker_20261002T015004Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/ExpenseVerificationDesk",
+      "issue": "Credential pattern indicators in code: api_key",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_ExpenseVerificationDesk_20261002T015005Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/ExpenseVerificationDesk",
+      "issue": "High-risk repo requires additional controls before agent access",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_ExpenseVerificationDesk_20261002T015005Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/ExpenseVerificationDesk",
+      "issue": "Spreadsheet/data export files found: sample_expenses.xlsx",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_ExpenseVerificationDesk_20261002T015005Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/IncomingRequestScreener",
+      "issue": "Medium-risk repo requires governance controls before agent access",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+      "verification_action": "Confirm required governance controls are present for a medium-risk repo.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_IncomingRequestScreener_20261002T015005Z.json",
+      "recommended_mode": "prompt_only",
+      "human_review_required": false,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/MultiAgentWorkbench",
+      "issue": "Medium-risk repo requires governance controls before agent access",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+      "verification_action": "Confirm required governance controls are present for a medium-risk repo.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_MultiAgentWorkbench_20261002T015006Z.json",
+      "recommended_mode": "prompt_only",
+      "human_review_required": false,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/PropertyLeadFinder",
+      "issue": "Credential pattern indicators in code: api_key, database_url",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_PropertyLeadFinder_20261002T015006Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/PropertyLeadFinder",
+      "issue": "High-risk repo requires additional controls before agent access",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_PropertyLeadFinder_20261002T015006Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/PropertyLeadFinder",
+      "issue": "Spreadsheet/data export files found: synthetic_hidden_equity_data_az (1).xlsx",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_PropertyLeadFinder_20261002T015006Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/RepoReadinessGovernor",
+      "issue": "Credential pattern indicators in code: api_key, database_url",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_RepoReadinessGovernor_20261002T015007Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/RepoReadinessGovernor",
+      "issue": "High-risk repo requires additional controls before agent access",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+      "verification_action": "Confirm credential pattern indicators are cleared or documented as safe.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_RepoReadinessGovernor_20261002T015007Z.json",
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/contract-risk-review-pipeline",
+      "issue": "Medium-risk repo requires governance controls before agent access",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+      "verification_action": "Confirm required governance controls are present for a medium-risk repo.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_contract-risk-review-pipeline_20261002T014940Z.json",
+      "recommended_mode": "prompt_only",
+      "human_review_required": false,
+      "priority": 2,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/IncomingRequestScreener",
+      "issue": "Missing .gitignore / unintended files may be tracked",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Add .gitignore entries for .env, virtual environments, caches, local reports, audit temp files, and generated workspaces.",
+      "verification_action": "Confirm required governance controls are present for a medium-risk repo.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_IncomingRequestScreener_20261002T015005Z.json",
+      "recommended_mode": "prompt_only",
+      "human_review_required": false,
+      "priority": 3,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    },
+    {
+      "repo": "driaialchemy/IncomingRequestScreener",
+      "issue": "Missing README / project context for agents",
+      "why_it_matters": "Autonomous coding agents need explicit governance controls before making changes.",
+      "corrective_action": "Add README with repo purpose, setup instructions, test command, expected inputs/outputs, and safe-use notes.",
+      "verification_action": "Confirm required governance controls are present for a medium-risk repo.",
+      "expected_evidence": "Updated audit with PASS status: audit/multi_repo/2026-10-02/repo_IncomingRequestScreener_20261002T015005Z.json",
+      "recommended_mode": "prompt_only",
+      "human_review_required": false,
+      "priority": 3,
+      "note": "Weekly scan_only mode reports findings only \u2014 target repos are not modified automatically."
+    }
+  ],
+  "repo_action_plans": [
+    {
+      "repo": "driaialchemy/AgentAuditLogger",
+      "risk": "MEDIUM",
+      "agent_ready": false,
+      "top_corrective_actions": [
+        {
+          "title": "Medium-risk repo requires governance controls before agent access",
+          "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+          "priority": 2
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Dependency manifest detected (package.json)",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "Test suite detected",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        },
+        {
+          "label": "HTTP networking detected (requests)",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "Dependency manifests present: package.json",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "HTTP networking libraries in use: requests",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "Test suite present \u2014 actively developed project",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        }
+      ],
+      "actionable_findings": [
+        {
+          "id": "medium_risk_controls",
+          "priority": 2,
+          "title": "Medium-risk repo requires governance controls before agent access",
+          "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+          "verification": "Confirm required governance controls are present for a medium-risk repo.",
+          "human_review_required": false
+        }
+      ],
+      "verification_steps": [
+        "Confirm required governance controls are present for a medium-risk repo."
+      ],
+      "recommended_mode": "prompt_only",
+      "human_review_required": false,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_AgentAuditLogger_20261002T014938Z.json"
+    },
+    {
+      "repo": "driaialchemy/AgentGovernanceHub",
+      "risk": "HIGH",
+      "agent_ready": false,
+      "top_corrective_actions": [
+        {
+          "title": "Credential pattern indicators found (api_key)",
+          "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+          "priority": 1
+        },
+        {
+          "title": "Credential pattern indicators in code: api_key",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "priority": 2
+        },
+        {
+          "title": "High-risk repo requires additional controls before agent access",
+          "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+          "priority": 2
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Dependency manifest detected (requirements.txt, package.json)",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "HTTP networking detected (requests)",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "AI provider integrations present (openai)",
+          "governance_implication": "Document API key handling and require human review for provider configuration changes."
+        },
+        {
+          "label": "Database terms present (postgres)",
+          "governance_implication": "Ensure connection strings use environment variables and data handling is documented."
+        },
+        {
+          "label": "External AI API usage: openai \u2014 API key management required",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "External database terms detected (postgres) \u2014 potential data compliance risk",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "Dependency manifests present: requirements.txt, package.json",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "HTTP networking libraries in use: requests",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        }
+      ],
+      "actionable_findings": [
+        {
+          "id": "credential_patterns",
+          "priority": 1,
+          "title": "Credential pattern indicators found (api_key)",
+          "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+          "verification": "Confirm credential pattern indicators are cleared or documented as safe.",
+          "human_review_required": true
+        },
+        {
+          "id": "issue_2",
+          "priority": 2,
+          "title": "Credential pattern indicators in code: api_key",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "verification": "Re-run scan_only and confirm the issue is resolved.",
+          "human_review_required": true
+        },
+        {
+          "id": "high_risk_controls",
+          "priority": 2,
+          "title": "High-risk repo requires additional controls before agent access",
+          "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+          "verification": "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation.",
+          "human_review_required": true
+        }
+      ],
+      "verification_steps": [
+        "Confirm credential pattern indicators are cleared or documented as safe.",
+        "Re-run scan_only and confirm the issue is resolved.",
+        "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation."
+      ],
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_AgentGovernanceHub_20261002T014939Z.json"
+    },
+    {
+      "repo": "driaialchemy/contract-risk-review-pipeline",
+      "risk": "MEDIUM",
+      "agent_ready": false,
+      "top_corrective_actions": [
+        {
+          "title": "Medium-risk repo requires governance controls before agent access",
+          "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+          "priority": 2
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Dependency manifest detected (requirements.txt)",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "Test suite detected",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        },
+        {
+          "label": "HTTP networking detected (requests)",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "Dependency manifests present: requirements.txt",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "HTTP networking libraries in use: requests",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "Test suite present \u2014 actively developed project",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        }
+      ],
+      "actionable_findings": [
+        {
+          "id": "medium_risk_controls",
+          "priority": 2,
+          "title": "Medium-risk repo requires governance controls before agent access",
+          "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+          "verification": "Confirm required governance controls are present for a medium-risk repo.",
+          "human_review_required": false
+        }
+      ],
+      "verification_steps": [
+        "Confirm required governance controls are present for a medium-risk repo."
+      ],
+      "recommended_mode": "prompt_only",
+      "human_review_required": false,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_contract-risk-review-pipeline_20261002T014940Z.json"
+    },
+    {
+      "repo": "driaialchemy/ContractRiskReview",
+      "risk": "HIGH",
+      "agent_ready": false,
+      "top_corrective_actions": [
+        {
+          "title": "Credential pattern indicators found (api_key)",
+          "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+          "priority": 1
+        },
+        {
+          "title": "Credential pattern indicators in code: api_key",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "priority": 2
+        },
+        {
+          "title": "High-risk repo requires additional controls before agent access",
+          "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+          "priority": 2
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Dependency manifest detected (requirements.txt, pyproject.toml)",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "Test suite detected",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        },
+        {
+          "label": "HTTP networking detected (requests)",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "CI/CD workflow present",
+          "governance_implication": "Review workflow permissions before allowing agent changes to pipeline files."
+        },
+        {
+          "label": "AI provider integrations present (anthropic, gemini, openai)",
+          "governance_implication": "Document API key handling and require human review for provider configuration changes."
+        },
+        {
+          "label": "Multiple AI provider integrations (anthropic, gemini, openai) \u2014 elevated orchestration complexity",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "Dependency manifests present: pyproject.toml, requirements.txt",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "CI/CD workflow configuration present (.github/workflows)",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "HTTP networking libraries in use: requests",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "Test suite present \u2014 actively developed project",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        }
+      ],
+      "actionable_findings": [
+        {
+          "id": "credential_patterns",
+          "priority": 1,
+          "title": "Credential pattern indicators found (api_key)",
+          "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+          "verification": "Confirm credential pattern indicators are cleared or documented as safe.",
+          "human_review_required": true
+        },
+        {
+          "id": "issue_2",
+          "priority": 2,
+          "title": "Credential pattern indicators in code: api_key",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "verification": "Re-run scan_only and confirm the issue is resolved.",
+          "human_review_required": true
+        },
+        {
+          "id": "high_risk_controls",
+          "priority": 2,
+          "title": "High-risk repo requires additional controls before agent access",
+          "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+          "verification": "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation.",
+          "human_review_required": true
+        }
+      ],
+      "verification_steps": [
+        "Confirm credential pattern indicators are cleared or documented as safe.",
+        "Re-run scan_only and confirm the issue is resolved.",
+        "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation."
+      ],
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_ContractRiskReview_20261002T014941Z.json"
+    },
+    {
+      "repo": "driaialchemy/EcommerceQueryStudio",
+      "risk": "MEDIUM",
+      "agent_ready": false,
+      "top_corrective_actions": [
+        {
+          "title": "Medium-risk repo requires governance controls before agent access",
+          "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+          "priority": 2
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Dependency manifest detected (pyproject.toml)",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "Test suite detected",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        },
+        {
+          "label": "HTTP networking detected (requests)",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "CI/CD workflow present",
+          "governance_implication": "Review workflow permissions before allowing agent changes to pipeline files."
+        },
+        {
+          "label": "Dependency manifests present: pyproject.toml",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "CI/CD workflow configuration present (.github/workflows)",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "HTTP networking libraries in use: requests",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "Test suite present \u2014 actively developed project",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        }
+      ],
+      "actionable_findings": [
+        {
+          "id": "medium_risk_controls",
+          "priority": 2,
+          "title": "Medium-risk repo requires governance controls before agent access",
+          "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+          "verification": "Confirm required governance controls are present for a medium-risk repo.",
+          "human_review_required": false
+        }
+      ],
+      "verification_steps": [
+        "Confirm required governance controls are present for a medium-risk repo."
+      ],
+      "recommended_mode": "prompt_only",
+      "human_review_required": false,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_EcommerceQueryStudio_20261002T014942Z.json"
+    },
+    {
+      "repo": "driaialchemy/EquipmentComplianceTracker",
+      "risk": "HIGH",
+      "agent_ready": false,
+      "top_corrective_actions": [
+        {
+          "title": "Credential pattern indicators found (api_key, database_url)",
+          "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+          "priority": 1
+        },
+        {
+          "title": "Credential pattern indicators in code: api_key, database_url",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "priority": 2
+        },
+        {
+          "title": "High-risk repo requires additional controls before agent access",
+          "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+          "priority": 2
+        },
+        {
+          "title": "Spreadsheet/data export files found: audit_trail.xlsx, audit_trail_with_tools_populated_demo_v2.xlsx, audit_trail_with_tools_populated_demo_v3.xlsx",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "priority": 2
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Dependency manifest detected (requirements.txt)",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "HTTP networking detected (httpx, requests)",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "Container configuration present",
+          "governance_implication": "Restrict agent access to container build and deployment commands."
+        },
+        {
+          "label": "AI provider integrations present (anthropic, gemini, google.generativeai, openai)",
+          "governance_implication": "Document API key handling and require human review for provider configuration changes."
+        },
+        {
+          "label": "Database terms present (postgres)",
+          "governance_implication": "Ensure connection strings use environment variables and data handling is documented."
+        },
+        {
+          "label": "Multiple AI provider integrations (anthropic, gemini, google.generativeai, openai) \u2014 elevated orchestration complexity",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "External database terms detected (postgres) \u2014 potential data compliance risk",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "Dependency manifests present: requirements.txt",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "Container configuration present (Dockerfile / docker-compose)",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "HTTP networking libraries in use: httpx, requests",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        }
+      ],
+      "actionable_findings": [
+        {
+          "id": "credential_patterns",
+          "priority": 1,
+          "title": "Credential pattern indicators found (api_key, database_url)",
+          "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+          "verification": "Confirm credential pattern indicators are cleared or documented as safe.",
+          "human_review_required": true
+        },
+        {
+          "id": "issue_3",
+          "priority": 2,
+          "title": "Credential pattern indicators in code: api_key, database_url",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "verification": "Re-run scan_only and confirm the issue is resolved.",
+          "human_review_required": true
+        },
+        {
+          "id": "high_risk_controls",
+          "priority": 2,
+          "title": "High-risk repo requires additional controls before agent access",
+          "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+          "verification": "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation.",
+          "human_review_required": true
+        },
+        {
+          "id": "issue_2",
+          "priority": 2,
+          "title": "Spreadsheet/data export files found: audit_trail.xlsx, audit_trail_with_tools_populated_demo_v2.xlsx, audit_trail_with_tools_populated_demo_v3.xlsx",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "verification": "Re-run scan_only and confirm the issue is resolved.",
+          "human_review_required": true
+        }
+      ],
+      "verification_steps": [
+        "Confirm credential pattern indicators are cleared or documented as safe.",
+        "Re-run scan_only and confirm the issue is resolved.",
+        "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation."
+      ],
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_EquipmentComplianceTracker_20261002T015004Z.json"
+    },
+    {
+      "repo": "driaialchemy/ExpenseVerificationDesk",
+      "risk": "HIGH",
+      "agent_ready": false,
+      "top_corrective_actions": [
+        {
+          "title": "Credential pattern indicators found (api_key)",
+          "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+          "priority": 1
+        },
+        {
+          "title": "Credential pattern indicators in code: api_key",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "priority": 2
+        },
+        {
+          "title": "High-risk repo requires additional controls before agent access",
+          "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+          "priority": 2
+        },
+        {
+          "title": "Spreadsheet/data export files found: sample_expenses.xlsx",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "priority": 2
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Dependency manifest detected (pyproject.toml)",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "Test suite detected",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        },
+        {
+          "label": "HTTP networking detected (httpx)",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "AI provider integrations present (anthropic)",
+          "governance_implication": "Document API key handling and require human review for provider configuration changes."
+        },
+        {
+          "label": "External AI API usage: anthropic \u2014 API key management required",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "Dependency manifests present: pyproject.toml",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "HTTP networking libraries in use: httpx",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "Test suite present \u2014 actively developed project",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        }
+      ],
+      "actionable_findings": [
+        {
+          "id": "credential_patterns",
+          "priority": 1,
+          "title": "Credential pattern indicators found (api_key)",
+          "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+          "verification": "Confirm credential pattern indicators are cleared or documented as safe.",
+          "human_review_required": true
+        },
+        {
+          "id": "issue_3",
+          "priority": 2,
+          "title": "Credential pattern indicators in code: api_key",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "verification": "Re-run scan_only and confirm the issue is resolved.",
+          "human_review_required": true
+        },
+        {
+          "id": "high_risk_controls",
+          "priority": 2,
+          "title": "High-risk repo requires additional controls before agent access",
+          "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+          "verification": "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation.",
+          "human_review_required": true
+        },
+        {
+          "id": "issue_2",
+          "priority": 2,
+          "title": "Spreadsheet/data export files found: sample_expenses.xlsx",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "verification": "Re-run scan_only and confirm the issue is resolved.",
+          "human_review_required": true
+        }
+      ],
+      "verification_steps": [
+        "Confirm credential pattern indicators are cleared or documented as safe.",
+        "Re-run scan_only and confirm the issue is resolved.",
+        "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation."
+      ],
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_ExpenseVerificationDesk_20261002T015005Z.json"
+    },
+    {
+      "repo": "driaialchemy/IncomingRequestScreener",
+      "risk": "MEDIUM",
+      "agent_ready": false,
+      "top_corrective_actions": [
+        {
+          "title": "Medium-risk repo requires governance controls before agent access",
+          "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+          "priority": 2
+        },
+        {
+          "title": "Missing .gitignore / unintended files may be tracked",
+          "corrective_action": "Add .gitignore entries for .env, virtual environments, caches, local reports, audit temp files, and generated workspaces.",
+          "priority": 3
+        },
+        {
+          "title": "Missing README / project context for agents",
+          "corrective_action": "Add README with repo purpose, setup instructions, test command, expected inputs/outputs, and safe-use notes.",
+          "priority": 3
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "HTTP networking detected (requests)",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "HTTP networking libraries in use: requests",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        }
+      ],
+      "actionable_findings": [
+        {
+          "id": "medium_risk_controls",
+          "priority": 2,
+          "title": "Medium-risk repo requires governance controls before agent access",
+          "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+          "verification": "Confirm required governance controls are present for a medium-risk repo.",
+          "human_review_required": false
+        },
+        {
+          "id": "missing_gitignore",
+          "priority": 3,
+          "title": "Missing .gitignore / unintended files may be tracked",
+          "corrective_action": "Add .gitignore entries for .env, virtual environments, caches, local reports, audit temp files, and generated workspaces.",
+          "verification": "Re-run scan_only and confirm .gitignore is present.",
+          "human_review_required": false
+        },
+        {
+          "id": "missing_readme",
+          "priority": 3,
+          "title": "Missing README / project context for agents",
+          "corrective_action": "Add README with repo purpose, setup instructions, test command, expected inputs/outputs, and safe-use notes.",
+          "verification": "Re-run scan_only and confirm README is present.",
+          "human_review_required": false
+        }
+      ],
+      "verification_steps": [
+        "Confirm required governance controls are present for a medium-risk repo.",
+        "Re-run scan_only and confirm .gitignore is present.",
+        "Re-run scan_only and confirm README is present."
+      ],
+      "recommended_mode": "prompt_only",
+      "human_review_required": false,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_IncomingRequestScreener_20261002T015005Z.json"
+    },
+    {
+      "repo": "driaialchemy/MultiAgentWorkbench",
+      "risk": "MEDIUM",
+      "agent_ready": false,
+      "top_corrective_actions": [
+        {
+          "title": "Medium-risk repo requires governance controls before agent access",
+          "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+          "priority": 2
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Dependency manifest detected (requirements.txt)",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "Test suite detected",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        },
+        {
+          "label": "Dependency manifests present: requirements.txt",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "Test suite present \u2014 actively developed project",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        }
+      ],
+      "actionable_findings": [
+        {
+          "id": "medium_risk_controls",
+          "priority": 2,
+          "title": "Medium-risk repo requires governance controls before agent access",
+          "corrective_action": "Add agent policy files and document verification requirements before agent use.",
+          "verification": "Confirm required governance controls are present for a medium-risk repo.",
+          "human_review_required": false
+        }
+      ],
+      "verification_steps": [
+        "Confirm required governance controls are present for a medium-risk repo."
+      ],
+      "recommended_mode": "prompt_only",
+      "human_review_required": false,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_MultiAgentWorkbench_20261002T015006Z.json"
+    },
+    {
+      "repo": "driaialchemy/PropertyLeadFinder",
+      "risk": "HIGH",
+      "agent_ready": false,
+      "top_corrective_actions": [
+        {
+          "title": "Credential pattern indicators found (api_key, database_url)",
+          "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+          "priority": 1
+        },
+        {
+          "title": "Credential pattern indicators in code: api_key, database_url",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "priority": 2
+        },
+        {
+          "title": "High-risk repo requires additional controls before agent access",
+          "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+          "priority": 2
+        },
+        {
+          "title": "Spreadsheet/data export files found: synthetic_hidden_equity_data_az (1).xlsx",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "priority": 2
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Dependency manifest detected (package.json)",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "Database terms present (postgres, supabase)",
+          "governance_implication": "Ensure connection strings use environment variables and data handling is documented."
+        },
+        {
+          "label": "Cloud deployment configuration present (wrangler.toml)",
+          "governance_implication": "Deployment changes should require explicit human approval."
+        },
+        {
+          "label": "External database terms detected (postgres, supabase) \u2014 potential data compliance risk",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "Cloud deployment configuration present: wrangler.toml",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "Dependency manifests present: package.json",
+          "governance_implication": "Dependency changes should require review and test verification."
+        }
+      ],
+      "actionable_findings": [
+        {
+          "id": "credential_patterns",
+          "priority": 1,
+          "title": "Credential pattern indicators found (api_key, database_url)",
+          "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+          "verification": "Confirm credential pattern indicators are cleared or documented as safe.",
+          "human_review_required": true
+        },
+        {
+          "id": "issue_3",
+          "priority": 2,
+          "title": "Credential pattern indicators in code: api_key, database_url",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "verification": "Re-run scan_only and confirm the issue is resolved.",
+          "human_review_required": true
+        },
+        {
+          "id": "high_risk_controls",
+          "priority": 2,
+          "title": "High-risk repo requires additional controls before agent access",
+          "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+          "verification": "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation.",
+          "human_review_required": true
+        },
+        {
+          "id": "issue_2",
+          "priority": 2,
+          "title": "Spreadsheet/data export files found: synthetic_hidden_equity_data_az (1).xlsx",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "verification": "Re-run scan_only and confirm the issue is resolved.",
+          "human_review_required": true
+        }
+      ],
+      "verification_steps": [
+        "Confirm credential pattern indicators are cleared or documented as safe.",
+        "Re-run scan_only and confirm the issue is resolved.",
+        "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation."
+      ],
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_PropertyLeadFinder_20261002T015006Z.json"
+    },
+    {
+      "repo": "driaialchemy/RepoReadinessGovernor",
+      "risk": "HIGH",
+      "agent_ready": false,
+      "top_corrective_actions": [
+        {
+          "title": "Credential pattern indicators found (api_key, database_url)",
+          "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+          "priority": 1
+        },
+        {
+          "title": "Credential pattern indicators in code: api_key, database_url",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "priority": 2
+        },
+        {
+          "title": "High-risk repo requires additional controls before agent access",
+          "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+          "priority": 2
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Dependency manifest detected (pyproject.toml)",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "Test suite detected",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        },
+        {
+          "label": "HTTP networking detected (aiohttp, httpx, requests)",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "CI/CD workflow present",
+          "governance_implication": "Review workflow permissions before allowing agent changes to pipeline files."
+        },
+        {
+          "label": "AI provider integrations present (anthropic, gemini, google.generativeai, openai)",
+          "governance_implication": "Document API key handling and require human review for provider configuration changes."
+        },
+        {
+          "label": "Database terms present (postgres, supabase)",
+          "governance_implication": "Ensure connection strings use environment variables and data handling is documented."
+        },
+        {
+          "label": "Multiple AI provider integrations (anthropic, gemini, google.generativeai, openai) \u2014 elevated orchestration complexity",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "External database terms detected (postgres, supabase) \u2014 potential data compliance risk",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "Dependency manifests present: pyproject.toml",
+          "governance_implication": "Dependency changes should require review and test verification."
+        },
+        {
+          "label": "CI/CD workflow configuration present (.github/workflows)",
+          "governance_implication": "Review governance implications in the audit evidence before agent use."
+        },
+        {
+          "label": "HTTP networking libraries in use: aiohttp, httpx, requests",
+          "governance_implication": "Agent changes should require review for external calls and data handling."
+        },
+        {
+          "label": "Test suite present \u2014 actively developed project",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        }
+      ],
+      "actionable_findings": [
+        {
+          "id": "credential_patterns",
+          "priority": 1,
+          "title": "Credential pattern indicators found (api_key, database_url)",
+          "corrective_action": "Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.",
+          "verification": "Confirm credential pattern indicators are cleared or documented as safe.",
+          "human_review_required": true
+        },
+        {
+          "id": "issue_2",
+          "priority": 2,
+          "title": "Credential pattern indicators in code: api_key, database_url",
+          "corrective_action": "Review the audit evidence and remediate this blocking issue.",
+          "verification": "Re-run scan_only and confirm the issue is resolved.",
+          "human_review_required": true
+        },
+        {
+          "id": "high_risk_controls",
+          "priority": 2,
+          "title": "High-risk repo requires additional controls before agent access",
+          "corrective_action": "Document approval gates, sensitive areas, and verification steps before any remediation agent is used.",
+          "verification": "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation.",
+          "human_review_required": true
+        }
+      ],
+      "verification_steps": [
+        "Confirm credential pattern indicators are cleared or documented as safe.",
+        "Re-run scan_only and confirm the issue is resolved.",
+        "Confirm governance files exist and high-risk blockers are resolved or explicitly approved for human-supervised remediation."
+      ],
+      "recommended_mode": "human_review_first",
+      "human_review_required": true,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_RepoReadinessGovernor_20261002T015007Z.json"
+    },
+    {
+      "repo": "driaialchemy/AgentProposalReview",
+      "risk": "LOW",
+      "agent_ready": true,
+      "top_corrective_actions": [],
+      "risk_signals": [
+        {
+          "label": "Test suite detected",
+          "governance_implication": "Use the existing test suite as the primary verification mechanism after agent changes."
+        }
+      ],
+      "actionable_findings": [],
+      "verification_steps": [
+        "Re-run weekly evidence in scan_only mode and confirm agent-ready PASS."
+      ],
+      "recommended_mode": "scan_only",
+      "human_review_required": false,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_AgentProposalReview_20261002T014940Z.json"
+    },
+    {
+      "repo": "driaialchemy/skillsartifactsbuild",
+      "risk": "LOW",
+      "agent_ready": true,
+      "top_corrective_actions": [],
+      "risk_signals": [],
+      "actionable_findings": [],
+      "verification_steps": [
+        "Re-run weekly evidence in scan_only mode and confirm agent-ready PASS."
+      ],
+      "recommended_mode": "scan_only",
+      "human_review_required": false,
+      "audit_path": "audit/multi_repo/2026-10-02/repo_skillsartifactsbuild_20261002T015007Z.json"
+    }
+  ],
+  "remediation_order": {
+    "start_here": [],
+    "next": [
+      "AgentAuditLogger",
+      "EcommerceQueryStudio",
+      "IncomingRequestScreener",
+      "MultiAgentWorkbench",
+      "contract-risk-review-pipeline"
+    ],
+    "human_review_first": [
+      "AgentGovernanceHub",
+      "ContractRiskReview",
+      "EquipmentComplianceTracker",
+      "ExpenseVerificationDesk",
+      "PropertyLeadFinder",
+      "RepoReadinessGovernor"
+    ]
+  },
+  "top_portfolio_issues": [
+    {
+      "issue": "credential pattern indicators",
+      "repo_count": 6
+    },
+    {
+      "issue": "high-risk repos needing controls",
+      "repo_count": 6
+    },
+    {
+      "issue": "Medium-risk repo requires governance controls before agent access",
+      "repo_count": 5
+    },
+    {
+      "issue": "Credential pattern indicators in code: api_key",
+      "repo_count": 3
+    },
+    {
+      "issue": "Credential pattern indicators in code: api_key, database_url",
+      "repo_count": 3
+    },
+    {
+      "issue": "Spreadsheet/data export files found: audit_trail.xlsx, audit_trail_with_tools_populated_demo_v2.xlsx, audit_trail_with_tools_populated_demo_v3.xlsx",
+      "repo_count": 1
+    },
+    {
+      "issue": "Spreadsheet/data export files found: sample_expenses.xlsx",
+      "repo_count": 1
+    },
+    {
+      "issue": "Spreadsheet/data export files found: synthetic_hidden_equity_data_az (1).xlsx",
+      "repo_count": 1
+    }
+  ],
+  "errors": [],
+  "discovery_warnings": [],
+  "email_delivery_status": "sent",
+  "email_delivery_message": "Evidence report emailed to ***REDACTED***",
+  "audit_summary_path": "audit/multi_repo/2026-10-02/multi_repo_run_bf78df86.json",
+  "executive_narrative": "Repo Governor scanned 13 repositories under driaialchemy. 2 of 13 scanned repositories are agent-ready. 6 repositories are high-risk and should receive human review before any remediation agent is used. The most common issues are 6 repos with credential pattern indicators and 6 repos with high-risk repos needing controls. The safest next step is to add agent policy files on a medium-risk repo such as AgentAuditLogger using prompt_only mode."
+}

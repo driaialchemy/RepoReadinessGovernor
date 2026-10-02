@@ -1,0 +1,180 @@
+AIAlchemy Repo Governor — Weekly Evidence Report
+Report date: 2026-10-02T01:49:37+00:00
+GitHub owner: driaialchemy
+Run mode: scan_only
+
+Repo Governor discovered 13 repositories under driaialchemy. 13 were eligible for scanning. 13 were scanned successfully. 0 were skipped because they were archived, forks, excluded by configuration, or otherwise disabled.
+2 passed agent-readiness checks and 11 still need governance work.
+
+Repo Governor scanned 13 repositories under driaialchemy. 2 of 13 scanned repositories are agent-ready. 6 repositories are high-risk and should receive human review before any remediation agent is used. The most common issues are 6 repos with credential pattern indicators and 6 repos with high-risk repos needing controls. The safest next step is to add agent policy files on a medium-risk repo such as AgentAuditLogger using prompt_only mode.
+
+The evidence report was emailed successfully.
+
+Discovered: 13
+Eligible: 13
+Scanned: 13
+Passed: 2
+Needs work: 11
+High risk: 6
+Medium risk: 5
+Low risk: 2
+Clone failed: 0
+Scan failed: 0
+Unattempted eligible: 0
+Skipped: 0
+
+Top portfolio-wide issues:
+  - 6 repos: credential pattern indicators
+  - 6 repos: high-risk repos needing controls
+  - 5 repos: Medium-risk repo requires governance controls before agent access
+  - 3 repos: Credential pattern indicators in code: api_key
+  - 3 repos: Credential pattern indicators in code: api_key, database_url
+  - 1 repos: Spreadsheet/data export files found: audit_trail.xlsx, audit_trail_with_tools_populated_demo_v2.xlsx, audit_trail_with_tools_populated_demo_v3.xlsx
+  - 1 repos: Spreadsheet/data export files found: sample_expenses.xlsx
+  - 1 repos: Spreadsheet/data export files found: synthetic_hidden_equity_data_az (1).xlsx
+
+Recommended Remediation Order
+
+Next: AgentAuditLogger, EcommerceQueryStudio, IncomingRequestScreener, MultiAgentWorkbench, contract-risk-review-pipeline
+Human review first: AgentGovernanceHub, ContractRiskReview, EquipmentComplianceTracker, ExpenseVerificationDesk, PropertyLeadFinder, RepoReadinessGovernor
+
+Per-Repo Action Plans
+
+Repo: driaialchemy/AgentAuditLogger
+  Risk: MEDIUM
+  Agent-ready: FAIL
+  Recommended mode: prompt_only
+  Human review required: No
+  1. Medium-risk repo requires governance controls before agent access: Add agent policy files and document verification requirements before agent use.
+  Risk signal: Dependency manifest detected (package.json) — Dependency changes should require review and test verification.
+  Risk signal: Test suite detected — Use the existing test suite as the primary verification mechanism after agent changes.
+  Risk signal: HTTP networking detected (requests) — Agent changes should require review for external calls and data handling.
+
+Repo: driaialchemy/AgentGovernanceHub
+  Risk: HIGH
+  Agent-ready: FAIL
+  Recommended mode: human_review_first
+  Human review required: Yes
+  1. Credential pattern indicators found (api_key): Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.
+  2. Credential pattern indicators in code: api_key: Review the audit evidence and remediate this blocking issue.
+  3. High-risk repo requires additional controls before agent access: Document approval gates, sensitive areas, and verification steps before any remediation agent is used.
+  Risk signal: Dependency manifest detected (requirements.txt, package.json) — Dependency changes should require review and test verification.
+  Risk signal: HTTP networking detected (requests) — Agent changes should require review for external calls and data handling.
+  Risk signal: AI provider integrations present (openai) — Document API key handling and require human review for provider configuration changes.
+
+Repo: driaialchemy/ContractRiskReview
+  Risk: HIGH
+  Agent-ready: FAIL
+  Recommended mode: human_review_first
+  Human review required: Yes
+  1. Credential pattern indicators found (api_key): Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.
+  2. Credential pattern indicators in code: api_key: Review the audit evidence and remediate this blocking issue.
+  3. High-risk repo requires additional controls before agent access: Document approval gates, sensitive areas, and verification steps before any remediation agent is used.
+  Risk signal: Dependency manifest detected (requirements.txt, pyproject.toml) — Dependency changes should require review and test verification.
+  Risk signal: Test suite detected — Use the existing test suite as the primary verification mechanism after agent changes.
+  Risk signal: HTTP networking detected (requests) — Agent changes should require review for external calls and data handling.
+
+Repo: driaialchemy/EcommerceQueryStudio
+  Risk: MEDIUM
+  Agent-ready: FAIL
+  Recommended mode: prompt_only
+  Human review required: No
+  1. Medium-risk repo requires governance controls before agent access: Add agent policy files and document verification requirements before agent use.
+  Risk signal: Dependency manifest detected (pyproject.toml) — Dependency changes should require review and test verification.
+  Risk signal: Test suite detected — Use the existing test suite as the primary verification mechanism after agent changes.
+  Risk signal: HTTP networking detected (requests) — Agent changes should require review for external calls and data handling.
+
+Repo: driaialchemy/EquipmentComplianceTracker
+  Risk: HIGH
+  Agent-ready: FAIL
+  Recommended mode: human_review_first
+  Human review required: Yes
+  1. Credential pattern indicators found (api_key, database_url): Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.
+  2. Credential pattern indicators in code: api_key, database_url: Review the audit evidence and remediate this blocking issue.
+  3. High-risk repo requires additional controls before agent access: Document approval gates, sensitive areas, and verification steps before any remediation agent is used.
+  4. Spreadsheet/data export files found: audit_trail.xlsx, audit_trail_with_tools_populated_demo_v2.xlsx, audit_trail_with_tools_populated_demo_v3.xlsx: Review the audit evidence and remediate this blocking issue.
+  Risk signal: Dependency manifest detected (requirements.txt) — Dependency changes should require review and test verification.
+  Risk signal: HTTP networking detected (httpx, requests) — Agent changes should require review for external calls and data handling.
+  Risk signal: Container configuration present — Restrict agent access to container build and deployment commands.
+
+Repo: driaialchemy/ExpenseVerificationDesk
+  Risk: HIGH
+  Agent-ready: FAIL
+  Recommended mode: human_review_first
+  Human review required: Yes
+  1. Credential pattern indicators found (api_key): Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.
+  2. Credential pattern indicators in code: api_key: Review the audit evidence and remediate this blocking issue.
+  3. High-risk repo requires additional controls before agent access: Document approval gates, sensitive areas, and verification steps before any remediation agent is used.
+  4. Spreadsheet/data export files found: sample_expenses.xlsx: Review the audit evidence and remediate this blocking issue.
+  Risk signal: Dependency manifest detected (pyproject.toml) — Dependency changes should require review and test verification.
+  Risk signal: Test suite detected — Use the existing test suite as the primary verification mechanism after agent changes.
+  Risk signal: HTTP networking detected (httpx) — Agent changes should require review for external calls and data handling.
+
+Repo: driaialchemy/IncomingRequestScreener
+  Risk: MEDIUM
+  Agent-ready: FAIL
+  Recommended mode: prompt_only
+  Human review required: No
+  1. Medium-risk repo requires governance controls before agent access: Add agent policy files and document verification requirements before agent use.
+  2. Missing .gitignore / unintended files may be tracked: Add .gitignore entries for .env, virtual environments, caches, local reports, audit temp files, and generated workspaces.
+  3. Missing README / project context for agents: Add README with repo purpose, setup instructions, test command, expected inputs/outputs, and safe-use notes.
+  Risk signal: HTTP networking detected (requests) — Agent changes should require review for external calls and data handling.
+  Risk signal: HTTP networking libraries in use: requests — Agent changes should require review for external calls and data handling.
+
+Repo: driaialchemy/MultiAgentWorkbench
+  Risk: MEDIUM
+  Agent-ready: FAIL
+  Recommended mode: prompt_only
+  Human review required: No
+  1. Medium-risk repo requires governance controls before agent access: Add agent policy files and document verification requirements before agent use.
+  Risk signal: Dependency manifest detected (requirements.txt) — Dependency changes should require review and test verification.
+  Risk signal: Test suite detected — Use the existing test suite as the primary verification mechanism after agent changes.
+  Risk signal: Dependency manifests present: requirements.txt — Dependency changes should require review and test verification.
+
+Repo: driaialchemy/PropertyLeadFinder
+  Risk: HIGH
+  Agent-ready: FAIL
+  Recommended mode: human_review_first
+  Human review required: Yes
+  1. Credential pattern indicators found (api_key, database_url): Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.
+  2. Credential pattern indicators in code: api_key, database_url: Review the audit evidence and remediate this blocking issue.
+  3. High-risk repo requires additional controls before agent access: Document approval gates, sensitive areas, and verification steps before any remediation agent is used.
+  4. Spreadsheet/data export files found: synthetic_hidden_equity_data_az (1).xlsx: Review the audit evidence and remediate this blocking issue.
+  Risk signal: Dependency manifest detected (package.json) — Dependency changes should require review and test verification.
+  Risk signal: Database terms present (postgres, supabase) — Ensure connection strings use environment variables and data handling is documented.
+  Risk signal: Cloud deployment configuration present (wrangler.toml) — Deployment changes should require explicit human approval.
+
+Repo: driaialchemy/RepoReadinessGovernor
+  Risk: HIGH
+  Agent-ready: FAIL
+  Recommended mode: human_review_first
+  Human review required: Yes
+  1. Credential pattern indicators found (api_key, database_url): Review flagged files to confirm whether actual credentials are present. Replace hardcoded secrets with environment variables or secret manager references.
+  2. Credential pattern indicators in code: api_key, database_url: Review the audit evidence and remediate this blocking issue.
+  3. High-risk repo requires additional controls before agent access: Document approval gates, sensitive areas, and verification steps before any remediation agent is used.
+  Risk signal: Dependency manifest detected (pyproject.toml) — Dependency changes should require review and test verification.
+  Risk signal: Test suite detected — Use the existing test suite as the primary verification mechanism after agent changes.
+  Risk signal: HTTP networking detected (aiohttp, httpx, requests) — Agent changes should require review for external calls and data handling.
+
+Repo: driaialchemy/contract-risk-review-pipeline
+  Risk: MEDIUM
+  Agent-ready: FAIL
+  Recommended mode: prompt_only
+  Human review required: No
+  1. Medium-risk repo requires governance controls before agent access: Add agent policy files and document verification requirements before agent use.
+  Risk signal: Dependency manifest detected (requirements.txt) — Dependency changes should require review and test verification.
+  Risk signal: Test suite detected — Use the existing test suite as the primary verification mechanism after agent changes.
+  Risk signal: HTTP networking detected (requests) — Agent changes should require review for external calls and data handling.
+
+Repo: driaialchemy/AgentProposalReview
+  Risk: LOW
+  Agent-ready: PASS
+  Recommended mode: scan_only
+  Human review required: No
+  Risk signal: Test suite detected — Use the existing test suite as the primary verification mechanism after agent changes.
+
+Repo: driaialchemy/skillsartifactsbuild
+  Risk: LOW
+  Agent-ready: PASS
+  Recommended mode: scan_only
+  Human review required: No
