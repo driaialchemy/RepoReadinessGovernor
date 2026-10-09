@@ -1,0 +1,106 @@
+{
+  "repo": "driaialchemy/IncomingRequestScreener",
+  "mode": "scan_only",
+  "timestamp": "2026-10-09T02:35:41+00:00",
+  "initial_scan": {
+    "name": "IncomingRequestScreener",
+    "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/IncomingRequestScreener",
+    "is_git_repo": true,
+    "has_gitignore": false,
+    "has_readme": false,
+    "has_claude_md": true,
+    "has_agents_md": true,
+    "has_env_files": false,
+    "env_file_paths": [],
+    "file_count": 2,
+    "languages": [],
+    "has_tests_dir": false,
+    "has_pyproject": false,
+    "has_requirements_txt": false,
+    "has_package_json": false,
+    "has_dockerfile": false,
+    "has_docker_compose": false,
+    "has_github_workflows": false,
+    "has_wrangler_toml": false,
+    "has_vercel_json": false,
+    "has_netlify_toml": false,
+    "has_render_yaml": false,
+    "artifact_paths": [],
+    "api_terms_found": [
+      "requests"
+    ],
+    "last_modified": "2026-10-09T02:35:41.328972"
+  },
+  "risk_classification": {
+    "risk_level": "MEDIUM",
+    "readiness_score": 60,
+    "agent_ready": false,
+    "risk_reasons": [
+      "HTTP networking libraries in use: requests",
+      "Missing README \u2014 project context unavailable to agent.",
+      "Missing .gitignore \u2014 unintended files may be tracked."
+    ],
+    "blocking_issues": [],
+    "recommended_actions": [
+      "Document external API endpoints in README to give agents accurate context.",
+      "Add README.md describing the project purpose and structure.",
+      "Add a .gitignore appropriate for the repository's language stack."
+    ],
+    "decision_taxonomy": {
+      "risk": "MEDIUM",
+      "complexity": "LOW",
+      "regulatory_impact": "LOW",
+      "business_importance": "LOW"
+    },
+    "governance_status": {
+      "P1": "not_present",
+      "P2": "not_present",
+      "P3": "not_present",
+      "P4": "not_present",
+      "uncertainty_monitoring": "not_present"
+    },
+    "scan": {
+      "name": "IncomingRequestScreener",
+      "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/IncomingRequestScreener",
+      "is_git_repo": true,
+      "has_gitignore": false,
+      "has_readme": false,
+      "has_claude_md": true,
+      "has_agents_md": true,
+      "has_env_files": false,
+      "env_file_paths": [],
+      "file_count": 2,
+      "languages": [],
+      "has_tests_dir": false,
+      "has_pyproject": false,
+      "has_requirements_txt": false,
+      "has_package_json": false,
+      "has_dockerfile": false,
+      "has_docker_compose": false,
+      "has_github_workflows": false,
+      "has_wrangler_toml": false,
+      "has_vercel_json": false,
+      "has_netlify_toml": false,
+      "has_render_yaml": false,
+      "artifact_paths": [],
+      "api_terms_found": [
+        "requests"
+      ],
+      "last_modified": "2026-10-09T02:35:41.328972"
+    }
+  },
+  "generated_artifacts": [],
+  "agent_prompt_path": null,
+  "remediation_plan_path": null,
+  "remediation_status": "not_requested",
+  "remediation_summary": "",
+  "passed": false,
+  "remaining_issues": [
+    "Risk level is MEDIUM, expected LOW.",
+    "Missing .gitignore.",
+    "HTTP networking libraries in use: requests",
+    "Missing README \u2014 project context unavailable to agent.",
+    "Missing .gitignore \u2014 unintended files may be tracked."
+  ],
+  "errors": []
+}

@@ -1,0 +1,102 @@
+{
+  "repo": "driaialchemy/MultiAgentWorkbench",
+  "mode": "scan_only",
+  "timestamp": "2026-10-09T02:35:41+00:00",
+  "initial_scan": {
+    "name": "MultiAgentWorkbench",
+    "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/MultiAgentWorkbench",
+    "is_git_repo": true,
+    "has_gitignore": true,
+    "has_readme": true,
+    "has_claude_md": true,
+    "has_agents_md": true,
+    "has_env_files": false,
+    "env_file_paths": [],
+    "file_count": 89,
+    "languages": [
+      "Python"
+    ],
+    "has_tests_dir": true,
+    "has_pyproject": false,
+    "has_requirements_txt": true,
+    "has_package_json": false,
+    "has_dockerfile": false,
+    "has_docker_compose": false,
+    "has_github_workflows": false,
+    "has_wrangler_toml": false,
+    "has_vercel_json": false,
+    "has_netlify_toml": false,
+    "has_render_yaml": false,
+    "artifact_paths": [],
+    "api_terms_found": [],
+    "last_modified": "2026-10-09T02:35:41.530421"
+  },
+  "risk_classification": {
+    "risk_level": "MEDIUM",
+    "readiness_score": 100,
+    "agent_ready": false,
+    "risk_reasons": [
+      "Dependency manifests present: requirements.txt",
+      "Test suite present \u2014 actively developed project."
+    ],
+    "blocking_issues": [],
+    "recommended_actions": [
+      "Run a dependency audit before starting an agent session.",
+      "Run the test suite before and after any agent session."
+    ],
+    "decision_taxonomy": {
+      "risk": "MEDIUM",
+      "complexity": "MEDIUM",
+      "regulatory_impact": "LOW",
+      "business_importance": "MEDIUM"
+    },
+    "governance_status": {
+      "P1": "present_active",
+      "P2": "present_active",
+      "P3": "not_present",
+      "P4": "not_present",
+      "uncertainty_monitoring": "not_present"
+    },
+    "scan": {
+      "name": "MultiAgentWorkbench",
+      "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/MultiAgentWorkbench",
+      "is_git_repo": true,
+      "has_gitignore": true,
+      "has_readme": true,
+      "has_claude_md": true,
+      "has_agents_md": true,
+      "has_env_files": false,
+      "env_file_paths": [],
+      "file_count": 89,
+      "languages": [
+        "Python"
+      ],
+      "has_tests_dir": true,
+      "has_pyproject": false,
+      "has_requirements_txt": true,
+      "has_package_json": false,
+      "has_dockerfile": false,
+      "has_docker_compose": false,
+      "has_github_workflows": false,
+      "has_wrangler_toml": false,
+      "has_vercel_json": false,
+      "has_netlify_toml": false,
+      "has_render_yaml": false,
+      "artifact_paths": [],
+      "api_terms_found": [],
+      "last_modified": "2026-10-09T02:35:41.530421"
+    }
+  },
+  "generated_artifacts": [],
+  "agent_prompt_path": null,
+  "remediation_plan_path": null,
+  "remediation_status": "not_requested",
+  "remediation_summary": "",
+  "passed": false,
+  "remaining_issues": [
+    "Risk level is MEDIUM, expected LOW.",
+    "Dependency manifests present: requirements.txt",
+    "Test suite present \u2014 actively developed project."
+  ],
+  "errors": []
+}
