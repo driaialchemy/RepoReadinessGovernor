@@ -1,0 +1,134 @@
+{
+  "repo": "driaialchemy/PropertyLeadFinder",
+  "mode": "scan_only",
+  "timestamp": "2026-10-16T00:49:12+00:00",
+  "initial_scan": {
+    "name": "PropertyLeadFinder",
+    "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/PropertyLeadFinder",
+    "is_git_repo": true,
+    "has_gitignore": true,
+    "has_readme": true,
+    "has_claude_md": true,
+    "has_agents_md": true,
+    "has_env_files": false,
+    "env_file_paths": [],
+    "file_count": 30,
+    "languages": [
+      "JavaScript",
+      "Python"
+    ],
+    "has_tests_dir": false,
+    "has_pyproject": false,
+    "has_requirements_txt": false,
+    "has_package_json": true,
+    "has_dockerfile": false,
+    "has_docker_compose": false,
+    "has_github_workflows": false,
+    "has_wrangler_toml": true,
+    "has_vercel_json": false,
+    "has_netlify_toml": false,
+    "has_render_yaml": false,
+    "artifact_paths": [
+      "synthetic_hidden_equity_data_az (1).xlsx"
+    ],
+    "api_terms_found": [
+      "api_key",
+      "cloudflare",
+      "database_url",
+      "postgres",
+      "supabase"
+    ],
+    "last_modified": "2026-10-16T00:49:12.258561"
+  },
+  "risk_classification": {
+    "risk_level": "HIGH",
+    "readiness_score": 65,
+    "agent_ready": false,
+    "risk_reasons": [
+      "Spreadsheet/data export files found: synthetic_hidden_equity_data_az (1).xlsx",
+      "Credential pattern indicators in code: api_key, database_url",
+      "External database terms detected (postgres, supabase) \u2014 potential data compliance risk.",
+      "Cloud deployment configuration present: wrangler.toml",
+      "Dependency manifests present: package.json"
+    ],
+    "blocking_issues": [
+      "Spreadsheet/data export files found: synthetic_hidden_equity_data_az (1).xlsx",
+      "Credential pattern indicators in code: api_key, database_url",
+      "External database terms detected (postgres, supabase) \u2014 potential data compliance risk.",
+      "Cloud deployment configuration present: wrangler.toml"
+    ],
+    "recommended_actions": [
+      "Remove data export files from the repository and add patterns to .gitignore.",
+      "Audit source code for hardcoded credentials and replace with environment variables.",
+      "Ensure database connection strings use environment variables; add .env to .gitignore.",
+      "Restrict agent access to deployment commands and review config before any session.",
+      "Run a dependency audit before starting an agent session."
+    ],
+    "decision_taxonomy": {
+      "risk": "HIGH",
+      "complexity": "MEDIUM",
+      "regulatory_impact": "HIGH",
+      "business_importance": "HIGH"
+    },
+    "governance_status": {
+      "P1": "not_present",
+      "P2": "not_present",
+      "P3": "not_present",
+      "P4": "not_present",
+      "uncertainty_monitoring": "not_present"
+    },
+    "scan": {
+      "name": "PropertyLeadFinder",
+      "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/PropertyLeadFinder",
+      "is_git_repo": true,
+      "has_gitignore": true,
+      "has_readme": true,
+      "has_claude_md": true,
+      "has_agents_md": true,
+      "has_env_files": false,
+      "env_file_paths": [],
+      "file_count": 30,
+      "languages": [
+        "JavaScript",
+        "Python"
+      ],
+      "has_tests_dir": false,
+      "has_pyproject": false,
+      "has_requirements_txt": false,
+      "has_package_json": true,
+      "has_dockerfile": false,
+      "has_docker_compose": false,
+      "has_github_workflows": false,
+      "has_wrangler_toml": true,
+      "has_vercel_json": false,
+      "has_netlify_toml": false,
+      "has_render_yaml": false,
+      "artifact_paths": [
+        "synthetic_hidden_equity_data_az (1).xlsx"
+      ],
+      "api_terms_found": [
+        "api_key",
+        "cloudflare",
+        "database_url",
+        "postgres",
+        "supabase"
+      ],
+      "last_modified": "2026-10-16T00:49:12.258561"
+    }
+  },
+  "generated_artifacts": [],
+  "agent_prompt_path": null,
+  "remediation_plan_path": null,
+  "remediation_status": "not_requested",
+  "remediation_summary": "",
+  "passed": false,
+  "remaining_issues": [
+    "Spreadsheet/data export files found: synthetic_hidden_equity_data_az (1).xlsx",
+    "Credential pattern indicators in code: api_key, database_url",
+    "External database terms detected (postgres, supabase) \u2014 potential data compliance risk.",
+    "Cloud deployment configuration present: wrangler.toml",
+    "Risk level is HIGH, expected LOW.",
+    "Dependency manifests present: package.json"
+  ],
+  "errors": []
+}
