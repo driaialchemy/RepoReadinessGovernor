@@ -1,4 +1,4 @@
-generated_at: '2026-10-16T00:48:50+00:00'
+generated_at: '2026-10-23T00:59:42+00:00'
 repos:
 - name: AgentAuditLogger
   full_name: driaialchemy/AgentAuditLogger
@@ -49,6 +49,15 @@ repos:
   full_name: driaialchemy/EcommerceQueryStudio
   url: https://github.com/driaialchemy/EcommerceQueryStudio.git
   branch: codex/remediate-runnable-baseline
+  enabled: true
+  mode: scan_only
+  visibility: public
+  archived: false
+  fork: false
+- name: ElevateBranson
+  full_name: driaialchemy/ElevateBranson
+  url: https://github.com/driaialchemy/ElevateBranson.git
+  branch: main
   enabled: true
   mode: scan_only
   visibility: public
