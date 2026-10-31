@@ -62,3 +62,8 @@ desktop.ini
 *.tar.gz
 *.whl
 MANIFEST
+
+# governance baseline ignores
+node_modules/
+audit_temp/
+generated/
