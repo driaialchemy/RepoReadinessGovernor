@@ -1,4 +1,4 @@
-generated_at: '2026-10-30T02:10:00+00:00'
+generated_at: '2026-11-06T02:51:25+00:00'
 repos:
 - name: AgentAuditLogger
   full_name: driaialchemy/AgentAuditLogger
@@ -112,15 +112,6 @@ repos:
   full_name: driaialchemy/RepoReadinessGovernor
   url: https://github.com/driaialchemy/RepoReadinessGovernor.git
   branch: master
-  enabled: true
-  mode: scan_only
-  visibility: public
-  archived: false
-  fork: false
-- name: skillsartifactsbuild
-  full_name: driaialchemy/skillsartifactsbuild
-  url: https://github.com/driaialchemy/skillsartifactsbuild.git
-  branch: main
   enabled: true
   mode: scan_only
   visibility: public
