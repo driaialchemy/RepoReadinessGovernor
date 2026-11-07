@@ -1,0 +1,120 @@
+{
+  "repo": "driaialchemy/RepoReadinessGovernor",
+  "mode": "scan_only",
+  "timestamp": "2026-11-07T02:41:01+00:00",
+  "initial_scan": {
+    "name": "RepoReadinessGovernor",
+    "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/RepoReadinessGovernor",
+    "is_git_repo": true,
+    "has_gitignore": true,
+    "has_readme": true,
+    "has_claude_md": true,
+    "has_agents_md": true,
+    "has_env_files": false,
+    "env_file_paths": [],
+    "file_count": 497,
+    "languages": [
+      "Python"
+    ],
+    "has_tests_dir": true,
+    "has_pyproject": true,
+    "has_requirements_txt": false,
+    "has_package_json": false,
+    "has_dockerfile": false,
+    "has_docker_compose": false,
+    "has_github_workflows": true,
+    "has_wrangler_toml": false,
+    "has_vercel_json": false,
+    "has_netlify_toml": false,
+    "has_render_yaml": false,
+    "artifact_paths": [],
+    "api_terms_found": [
+      "aiohttp",
+      "anthropic",
+      "cloudflare",
+      "gemini",
+      "google.generativeai",
+      "httpx",
+      "openai",
+      "postgres",
+      "requests",
+      "sqlite",
+      "supabase"
+    ],
+    "last_modified": "2026-11-07T02:41:00.922867"
+  },
+  "risk_classification": {
+    "risk_level": "LOW",
+    "readiness_score": 90,
+    "agent_ready": true,
+    "risk_reasons": [],
+    "blocking_issues": [],
+    "accepted_risks": [
+      "AI provider usage (anthropic, gemini, google.generativeai, openai) \u2014 accepted: Provider names appear as detection terms in scanner/classifier source, tests and docs; the tool makes no provider calls (approved by Dr. Michael Seller on 2026-11-06)",
+      "External database use (postgres, supabase) \u2014 accepted: Database names appear as detection terms in scanner/classifier source, tests and docs; the tool uses no database (approved by Dr. Michael Seller on 2026-11-06)"
+    ],
+    "recommended_actions": [],
+    "decision_taxonomy": {
+      "risk": "LOW",
+      "complexity": "HIGH",
+      "regulatory_impact": "HIGH",
+      "business_importance": "MEDIUM"
+    },
+    "governance_status": {
+      "P1": "not_present",
+      "P2": "not_present",
+      "P3": "not_present",
+      "P4": "not_present",
+      "uncertainty_monitoring": "not_present"
+    },
+    "scan": {
+      "name": "RepoReadinessGovernor",
+      "path": "/home/runner/work/RepoReadinessGovernor/RepoReadinessGovernor/workspace/repos/RepoReadinessGovernor",
+      "is_git_repo": true,
+      "has_gitignore": true,
+      "has_readme": true,
+      "has_claude_md": true,
+      "has_agents_md": true,
+      "has_env_files": false,
+      "env_file_paths": [],
+      "file_count": 497,
+      "languages": [
+        "Python"
+      ],
+      "has_tests_dir": true,
+      "has_pyproject": true,
+      "has_requirements_txt": false,
+      "has_package_json": false,
+      "has_dockerfile": false,
+      "has_docker_compose": false,
+      "has_github_workflows": true,
+      "has_wrangler_toml": false,
+      "has_vercel_json": false,
+      "has_netlify_toml": false,
+      "has_render_yaml": false,
+      "artifact_paths": [],
+      "api_terms_found": [
+        "aiohttp",
+        "anthropic",
+        "cloudflare",
+        "gemini",
+        "google.generativeai",
+        "httpx",
+        "openai",
+        "postgres",
+        "requests",
+        "sqlite",
+        "supabase"
+      ],
+      "last_modified": "2026-11-07T02:41:00.922867"
+    }
+  },
+  "generated_artifacts": [],
+  "agent_prompt_path": null,
+  "remediation_plan_path": null,
+  "remediation_status": "not_requested",
+  "remediation_summary": "",
+  "passed": true,
+  "remaining_issues": [],
+  "errors": []
+}
