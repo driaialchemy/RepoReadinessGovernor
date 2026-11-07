@@ -416,3 +416,75 @@ def test_scan_root_raises_on_file_path(tmp_path):
 
     with pytest.raises(ValueError, match="Not a directory"):
         scan_root(f)
+
+
+# --- credential detection: real secrets only ---
+
+def test_credential_words_in_docs_are_not_flagged(tmp_path):
+    (tmp_path / "CLAUDE.md").write_text("Never commit api_key or DATABASE_URL values.\n")
+    (tmp_path / "README.md").write_text("Set API_KEY in your environment.\n")
+
+    repo = scan_repo(tmp_path)
+
+    assert "api_key" not in repo.api_terms_found
+    assert "database_url" not in repo.api_terms_found
+
+
+def test_credential_env_var_reads_are_not_flagged(tmp_path):
+    (tmp_path / "app.py").write_text(
+        "import os\napi_key = os.environ['OPENAI_API_KEY']\n"
+        "DATABASE_URL = os.getenv('DATABASE_URL')\n"
+    )
+
+    repo = scan_repo(tmp_path)
+
+    assert "api_key" not in repo.api_terms_found
+    assert "database_url" not in repo.api_terms_found
+
+
+def test_credential_placeholders_and_weak_dev_urls_are_not_flagged(tmp_path):
+    (tmp_path / "config.py").write_text(
+        'api_key = "your-api-key-here"\n'
+        'DATABASE_URL = "postgresql://postgres:postgres@localhost:5432/app"\n'
+    )
+
+    repo = scan_repo(tmp_path)
+
+    assert "api_key" not in repo.api_terms_found
+    assert "database_url" not in repo.api_terms_found
+
+
+def test_hardcoded_api_key_is_flagged(tmp_path):
+    (tmp_path / "client.py").write_text('api_key = "q8Zr2LmN7vXc4TbK9wPd"\n')
+
+    repo = scan_repo(tmp_path)
+
+    assert "api_key" in repo.api_terms_found
+
+
+def test_provider_key_format_is_flagged(tmp_path):
+    (tmp_path / "notes.txt").write_text("key: sk-" + "aB3dE5gH7jK9mN2pQ4sT6vX8zC1fL0rW5yU3" + "\n")
+
+    repo = scan_repo(tmp_path)
+
+    assert "api_key" in repo.api_terms_found
+
+
+def test_url_with_real_password_is_flagged(tmp_path):
+    (tmp_path / "db.py").write_text(
+        'URL = "postgresql://svc_user:Xk29fQ7mLpR4vZ@db.internal:5432/prod"\n'
+    )
+
+    repo = scan_repo(tmp_path)
+
+    assert "database_url" in repo.api_terms_found
+
+
+def test_key_prefix_inside_ordinary_words_is_not_flagged(tmp_path):
+    (tmp_path / "audit.json").write_text(
+        '{"repo": "risk-review-pipeline-for-contracts-and-agreements-v2"}\n'
+    )
+
+    repo = scan_repo(tmp_path)
+
+    assert "api_key" not in repo.api_terms_found

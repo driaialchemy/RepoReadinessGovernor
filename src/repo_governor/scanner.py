@@ -1,6 +1,7 @@
 """Repository scanner — discovers and inspects repos under a root path."""
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
@@ -52,8 +53,6 @@ API_TERMS = frozenset({
     "requests",
     "httpx",
     "aiohttp",
-    "api_key",
-    "database_url",
     "postgres",
     "sqlite",
     "supabase",
@@ -97,6 +96,62 @@ LANGUAGE_EXTENSIONS: dict[str, str] = {
 }
 
 MAX_SCAN_BYTES = 1_048_576  # 1 MB — files larger than this are not content-scanned
+
+# "api_key" / "database_url" are reported only when a file holds a hardcoded
+# secret value. The bare words appear in docs, tests and env-var reads, which
+# are not leaks.
+_ASSIGNED_SECRET = re.compile(
+    r"""\b(?P<name>api[_-]?key|database[_-]?url)\b["']?\s*[:=]\s*["'](?P<value>[^"'\s]{8,})["']""",
+    re.IGNORECASE,
+)
+_KEY_FORMATS = re.compile(
+    r"(?<![A-Za-z0-9_-])(?:"
+    r"sk-ant-[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9_-]{32,}|AIza[0-9A-Za-z_-]{35}"
+    r"|gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|AKIA[0-9A-Z]{16}"
+    r")|-----BEGIN [A-Z ]*PRIVATE KEY-----"
+)
+_URL_PASSWORD = re.compile(
+    r"\b(?:postgres(?:ql)?|mysql|mongodb(?:\+srv)?|redis|amqp)://"
+    r"(?P<user>[^:@/\s'\"]+):(?P<pw>[^@\s'\"]+)@",
+    re.IGNORECASE,
+)
+_PLACEHOLDER_MARKERS = (
+    "your", "example", "change", "placeholder", "sample", "dummy", "fake", "test",
+    "xxx", "***", "...", "<", ">", "${", "{{", "%s", "{", "env", "secret", "token",
+    "password", "redacted", "todo", "none", "null", "localhost",
+)
+_WEAK_DEV_PASSWORDS = frozenset({"postgres", "password", "pass", "admin", "root", "user", "dev"})
+
+
+def _is_placeholder(value: str) -> bool:
+    lowered = value.lower()
+    return (
+        any(m in lowered for m in _PLACEHOLDER_MARKERS)
+        or len(set(lowered)) <= 2
+        or lowered.startswith(("os.", "process.", "getenv"))
+    )
+
+
+def _is_weak_url_password(pw: str) -> bool:
+    return _is_placeholder(pw) or pw.lower() in _WEAK_DEV_PASSWORDS
+
+
+def _hardcoded_secret_terms(text: str) -> set[str]:
+    """Return {"api_key", "database_url"} members backed by a real-looking secret value."""
+    found: set[str] = set()
+    for m in _ASSIGNED_SECRET.finditer(text):
+        value = m.group("value")
+        if m.group("name").lower().startswith("database"):
+            pw = _URL_PASSWORD.search(value)
+            if pw is not None and not _is_weak_url_password(pw.group("pw")):
+                found.add("database_url")
+        elif not _is_placeholder(value):
+            found.add("api_key")
+    if any(len(set(m.group(0))) > 6 for m in _KEY_FORMATS.finditer(text)):
+        found.add("api_key")
+    if any(not _is_weak_url_password(m.group("pw")) for m in _URL_PASSWORD.finditer(text)):
+        found.add("database_url")
+    return found
 
 
 @dataclass
@@ -195,10 +250,12 @@ def _scan_text_file(file_path: Path) -> set[str]:
     try:
         if file_path.stat().st_size > MAX_SCAN_BYTES:
             return set()
-        text = file_path.read_text(encoding="utf-8", errors="ignore").lower()
+        raw = file_path.read_text(encoding="utf-8", errors="ignore")
     except OSError:
         return set()
-    return {term for term in API_TERMS if term in text}
+    text = raw.lower()
+    found = {term for term in API_TERMS if term in text}
+    return found | _hardcoded_secret_terms(raw)
 
 
 def scan_repo(repo_path: Path) -> RepoInfo:
