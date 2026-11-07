@@ -184,6 +184,11 @@ def _format_repo_action_plans_md(plans: list[dict[str, Any]]) -> list[str]:
             for signal in signals[:5]:
                 lines.append(f"  - {signal['label']}")
                 lines.append(f"    - {signal['governance_implication']}")
+        accepted = plan.get("accepted_risks") or []
+        if accepted:
+            lines.append("- **Accepted risks (reviewed exceptions):**")
+            for note in accepted:
+                lines.append(f"  - {note}")
         verification = plan.get("verification_steps") or []
         if verification:
             lines.append("- **Verification steps:**")
@@ -211,6 +216,8 @@ def _format_repo_action_plans_txt(plans: list[dict[str, Any]]) -> list[str]:
             lines.append(f"  {idx}. {action['title']}: {action['corrective_action']}")
         for signal in (plan.get("risk_signals") or [])[:3]:
             lines.append(f"  Risk signal: {signal['label']} — {signal['governance_implication']}")
+        for note in plan.get("accepted_risks") or []:
+            lines.append(f"  Accepted risk: {note}")
         lines.append("")
     return lines
 

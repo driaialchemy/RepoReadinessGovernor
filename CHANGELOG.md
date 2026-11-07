@@ -1,3 +1,4 @@
+- Reviewed accepted-risk exceptions (`config/accepted_risks.yml`): per-repo, attributed (reason/approver/date), narrowly scoped to named providers, config files or path globs, and listed in the report under Accepted risks. Secret files, credential patterns and missing version control can never be excepted.
 - Credential detection: `api_key` / `database_url` are now reported only when a file holds a hardcoded secret value (assigned literal, known provider key format, or URL with a real password). The bare words in docs, tests, placeholders and env-var reads no longer trigger credential findings.
 - Scan/classify now emit governance_status (P1–P4 + uncertainty_monitoring) as not_present / present_inert / present_active; existing PASS gates unchanged.
 - P2/P4: classification output adds a decision taxonomy (risk/complexity/regulatory/business); generated policy sections labeled by TRUST letter.

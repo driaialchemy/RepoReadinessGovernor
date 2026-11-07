@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Literal
 
+from .accepted_risks import load_accepted_risks
 from .classifier import ClassifiedRepo, RiskLevel, classify_repo
 from .policy import generate_repo_policy, write_policy, write_repo_policy
 from .scanner import RepoInfo, scan_repo
@@ -104,6 +105,7 @@ def _classified_repo_to_dict(cr: ClassifiedRepo) -> dict[str, Any]:
         "agent_ready": cr.agent_ready,
         "risk_reasons": cr.risk_reasons,
         "blocking_issues": cr.blocking_issues,
+        "accepted_risks": cr.accepted_risks,
         "recommended_actions": cr.recommended_actions,
         "decision_taxonomy": cr.decision_taxonomy or None,
         "governance_status": cr.governance_status or None,
@@ -140,7 +142,7 @@ def run_initial_scan(repo_path: Path) -> RepoInfo:
 
 def classify_repo_risk(repo_info: RepoInfo) -> ClassifiedRepo:
     """Classify repository risk from scan results."""
-    return classify_repo(repo_info)
+    return classify_repo(repo_info, accepted=load_accepted_risks())
 
 
 def generate_policy_artifacts(

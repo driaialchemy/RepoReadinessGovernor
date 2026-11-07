@@ -373,6 +373,7 @@ def build_repo_action_plan(item: dict[str, Any], *, max_actions: int = 5) -> dic
             for f in top_actions
         ],
         "risk_signals": risk_signals,
+        "accepted_risks": list(item.get("accepted_risks") or []),
         "actionable_findings": findings,
         "verification_steps": verification_steps,
         "recommended_mode": _recommended_mode_for_repo(item, findings),

@@ -14,6 +14,7 @@ from typing import Any, Literal
 
 logger = logging.getLogger(__name__)
 
+from .accepted_risks import load_accepted_risks
 from .classifier import classify_repo
 from .evidence_report import enrich_repo_result_for_report, generate_evidence_reports
 from .goal_based_loop import (
@@ -234,7 +235,7 @@ def run_repo_governance_check(
             return enrich_repo_result_for_report(result)
 
         repo_info = run_initial_scan(repo_path)
-        classified = classify_repo(repo_info)
+        classified = classify_repo(repo_info, accepted=load_accepted_risks())
         scan_dict = _repo_info_to_dict(repo_info)
         risk_dict = _classified_repo_to_dict(classified)
 
@@ -247,6 +248,7 @@ def run_repo_governance_check(
             "initial_scan": scan_dict,
             "has_claude_md": repo_info.has_claude_md,
             "remaining_issues": _remaining_issues(classified),
+            "accepted_risks": classified.accepted_risks,
             "policy_artifact_status": "recommendations_only",
             "remediation_status": "not_requested",
             "verification_status": "scan_only_no_verification_loop",

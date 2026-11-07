@@ -1,0 +1,163 @@
+# Reviewed accepted-risk exceptions for Repo Governor.
+#
+# An exception moves a finding from "blocking" to "accepted" (it still appears
+# in the report under "Accepted risks"). Rules:
+#   - Every entry needs reason, approved_by and approved_on, or it is ignored.
+#   - Scope is narrow: named providers/config files (terms) or file globs (paths).
+#     A new provider, database, config file or spreadsheet is flagged again.
+#   - Never exceptable: committed secret files, credential patterns in code,
+#     missing version control. Those categories are rejected by the loader.
+#
+# Categories: ai_providers, external_database, cloud_deployment (terms);
+#             spreadsheet_files, database_files, log_files (paths);
+#             context_signals (terms: dependency_manifests, containers, ci_cd,
+#             http_libraries, test_suite, node_modules, large_file_count).
+version: 1
+repos:
+  AgentGovernanceHub:
+    accepted:
+      - category: ai_providers
+        terms: [openai]
+        reason: OpenAI is the product's intended LLM integration; keys come from environment variables
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+      - category: external_database
+        terms: [postgres]
+        reason: Postgres is the application's intended datastore; connection strings come from environment variables
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+      - category: context_signals
+        terms: [dependency_manifests, http_libraries]
+        reason: Normal project structure; CLAUDE.md, AGENTS.md, README and .gitignore are present
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+
+  ElevateBranson:
+    accepted:
+      - category: ai_providers
+        terms: [openai]
+        reason: OpenAI is the product's intended LLM integration; keys come from environment variables
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+      - category: context_signals
+        terms: [dependency_manifests, http_libraries]
+        reason: Normal project structure; CLAUDE.md, AGENTS.md, README and .gitignore are present
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+
+  EquipmentComplianceTracker:
+    accepted:
+      - category: ai_providers
+        terms: [anthropic, gemini, google.generativeai, openai]
+        reason: Multi-model compliance agents are the product's purpose; keys come from environment variables
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+      - category: external_database
+        terms: [postgres]
+        reason: Optional PostgreSQL backend; connection comes from DATABASE_URL in .env (gitignored)
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+      - category: spreadsheet_files
+        paths: ["sample_data/*.xlsx", "seed/*.xlsx"]
+        reason: Demo workbooks in sample_data/ and the seed catalog in seed/ (needed by container config); no real operational data
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+      - category: context_signals
+        terms: [dependency_manifests, containers, http_libraries]
+        reason: Normal project structure; CLAUDE.md, AGENTS.md, README and .gitignore are present
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+
+  ExpenseVerificationDesk:
+    accepted:
+      - category: ai_providers
+        terms: [anthropic]
+        reason: Anthropic is the intended LLM for expense checking; keys come from environment variables
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+      - category: spreadsheet_files
+        paths: ["sample_data/sample_expenses.xlsx"]
+        reason: Synthetic expense fixture (40 rows) used by the README and tests; no real expense data
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+      - category: context_signals
+        terms: [dependency_manifests, http_libraries, test_suite]
+        reason: Normal project structure; CLAUDE.md, AGENTS.md, README and .gitignore are present
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+
+  PropertyLeadFinder:
+    accepted:
+      - category: external_database
+        terms: [postgres, supabase]
+        reason: Supabase/Postgres is the application's intended datastore; connection details come from environment variables
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+      - category: cloud_deployment
+        terms: [wrangler.toml]
+        reason: Cloudflare Workers deploy config; deployment changes still require explicit human approval (see AGENTS.md)
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+      - category: spreadsheet_files
+        paths: ["sample_data/synthetic_hidden_equity_data_az.xlsx"]
+        reason: Synthetic generated sample workbook (Faker contacts); must never be replaced with real prospect data
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+
+  RepoReadinessGovernor:
+    accepted:
+      - category: ai_providers
+        terms: [anthropic, gemini, google.generativeai, openai]
+        reason: Provider names appear as detection terms in scanner/classifier source, tests and docs; the tool makes no provider calls
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+      - category: external_database
+        terms: [postgres, supabase]
+        reason: Database names appear as detection terms in scanner/classifier source, tests and docs; the tool uses no database
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+      - category: context_signals
+        terms: [dependency_manifests, ci_cd, http_libraries, test_suite]
+        reason: Normal project structure; CLAUDE.md, AGENTS.md, README and .gitignore are present
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+
+  AgentAuditLogger:
+    accepted:
+      - category: context_signals
+        terms: [dependency_manifests, http_libraries, test_suite]
+        reason: Normal project structure; CLAUDE.md, AGENTS.md, README and .gitignore are present
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+
+  ContractRiskReview:
+    accepted:
+      - category: context_signals
+        terms: [dependency_manifests, ci_cd, http_libraries, test_suite]
+        reason: Normal project structure; CLAUDE.md, AGENTS.md, README and .gitignore are present
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+
+  contract-risk-review-pipeline:
+    accepted:
+      - category: context_signals
+        terms: [dependency_manifests, http_libraries, test_suite]
+        reason: Normal project structure; CLAUDE.md, AGENTS.md, README and .gitignore are present
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+
+  EcommerceQueryStudio:
+    accepted:
+      - category: context_signals
+        terms: [dependency_manifests, ci_cd, http_libraries, test_suite]
+        reason: Normal project structure; CLAUDE.md, AGENTS.md, README and .gitignore are present
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
+
+  MultiAgentWorkbench:
+    accepted:
+      - category: context_signals
+        terms: [dependency_manifests, test_suite]
+        reason: Normal project structure; CLAUDE.md, AGENTS.md, README and .gitignore are present
+        approved_by: Dr. Michael Seller
+        approved_on: "2026-11-06"
